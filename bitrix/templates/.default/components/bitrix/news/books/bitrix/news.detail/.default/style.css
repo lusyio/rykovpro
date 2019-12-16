@@ -1,0 +1,266 @@
+/*---------------------------
+	BOOKS DETAIL
+---------------------------*/
+
+.books-detail {
+	padding: 25px 0;
+}
+
+.books-detail-picture {
+	position: relative;
+}
+
+.books-detail-picture span {
+	align-items: center;
+	background-color:  #d2232a;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 35px;
+	left: -12px;
+	height: 25px;
+	width: 75px;
+}
+
+.books-detail-picture span::before {
+	border-color: #d2232a transparent transparent transparent;
+	border-style: solid;
+	border-width: 25px 15px 0 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -15px;
+	height: 0;
+	width: 0;
+}
+
+.books-detail-title {
+	margin: 25px 0 55px;
+}
+
+.books-detail-title h2 {
+	color: #333;
+	display: block;
+	font-size: 1.8rem;
+	font-weight: 700;
+	position: relative;
+	text-indent: 10px;
+}
+
+.books-detail-title h2::before {
+	align-items: center;
+	color: #d2232a;
+	content: '/';
+	display: flex;
+	font-size: 1.8rem;
+	font-weight: 900;
+	position: absolute;
+	top: 0px;
+	left: -20px;
+}
+
+.books-detail-desc p {
+	color: #656565;
+}
+
+.books-detail-desc b {
+	color: #333;
+}
+
+.books-detail-read {
+	margin: 25px 0;
+	padding: 0 30px;
+}
+
+.books-detail-annotation {
+	margin: 25px 0;
+}
+
+.books-detail-annotation h3 {
+	font-size: 1.5rem;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+}
+
+.books-detail-annotation p {
+	color: #000;
+}
+
+.books-detail-buy {
+	background-color: #333;
+	min-height: 195px;
+}
+
+.books-detail-buy-title {
+	align-items: center;
+	background-color: #d2232a;
+	color: #fff;
+	display: flex;
+	font-size: 1.125rem;
+	font-weight: 700;
+	justify-content: center;
+	min-height: 42px;
+}
+
+.books-detail-buy-title i {
+	display: inline-flex;
+	font-size: 1.5rem;
+	font-weight: 100;
+	margin-right: 12px;
+}
+
+.books-detail-buy-cost {
+	align-items: center;
+	border-bottom: 1px dashed #9d9d9d;
+	display: flex;
+	justify-content: center;
+	min-height: 78px;
+	width: 100%;
+}
+
+.books-detail-buy-cost span {
+	color: #fff;
+	display: inline-block;
+	font-size: 2.2rem;
+	font-weight: 700;
+	padding-right: 30px;
+	position: relative;
+}
+
+.books-detail-buy-cost span::before {
+	content: "\e90d";
+	font-family: "icomoon";
+	font-size: 1.5rem;
+	font-weight: 700;
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+
+.books-detail-buy-link {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 75px;
+}
+
+@media(max-width: 991px) {
+
+	.books-detail-title {
+		margin: 25px 0 30px;
+	}
+
+	.books-detail-title h2 {
+		font-size: 1.5rem;
+	}
+
+	.books-detail-title h2::before {
+		font-size: 1.5rem;
+		left: -15px;
+	}
+
+	.books-detail-desc p {
+		font-size: 0.9rem;
+	}
+
+	.books-detail-buy-title {
+		font-size: 0.9rem;
+	}
+
+	.books-detail-buy-title i {
+		font-size: 1.2rem;
+		margin-right: 8px;
+	}
+
+	.books-detail-buy-cost {
+		min-height: 70px;
+	}
+
+	.books-detail-buy-cost span {
+		font-size: 1.5rem;
+		padding-right: 20px;
+	}
+
+	.books-detail-buy-cost span::before {
+		font-size: 1.1rem;
+	}
+
+	.books-detail-buy-link .btn {
+		padding: 0 32px;
+		height: 35px;
+	}
+
+	.books-detail-picture {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		min-height: 420px;
+	}
+
+	/*.books-detail-picture span {
+		top: 40px;
+	}*/
+
+}
+
+@media(max-width: 575px) {
+
+	.books-detail-title {
+		margin: 25px 0 30px;
+	}
+
+	.books-detail-title h2 {
+		font-size: 1.1rem;
+	}
+
+	.books-detail-title h2::before {
+		font-size: 1.1rem;
+	}
+
+	.books-detail-desc p {
+		font-size: 1rem;
+	}
+
+	.books-detail-read {
+		display: flex;
+		margin: 25px auto;
+		width: 175px;
+	}
+
+	.books-detail-buy-title {
+		font-size: 1.125rem;
+	}
+
+	.books-detail-buy-title i {
+		font-size: 1.5rem;
+		margin-right: 12px;
+	}
+
+	.books-detail-buy-cost {
+		min-height: 78px;
+	}
+
+	.books-detail-buy-cost span {
+		font-size: 2.2rem;
+		padding-right: 30px;
+	}
+
+	.books-detail-buy-cost span::before {
+		font-size: 1.5rem;
+	}
+
+	.books-detail-buy-link .btn {
+		padding: 0 42px;
+		height: 45px;
+	}
+
+	.books-detail-annotation {
+		margin: 45px 0 25px;
+	}
+
+	.books-detail-annotation h3 {
+		margin-bottom: 25px;
+	}
+
+}

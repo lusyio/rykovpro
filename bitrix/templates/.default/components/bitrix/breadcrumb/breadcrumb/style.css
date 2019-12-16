@@ -1,0 +1,53 @@
+/*---------------------------
+	BREADCRUMB
+---------------------------*/
+
+.breadcrumb {
+	background: transparent;
+	margin: 25px 0;
+}
+
+.breadcrumb ul {
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumb li {
+	display: inline-block;
+	margin-right: 5px;
+	padding-right: 15px;
+	position: relative;
+}
+
+.breadcrumb li::before {
+	color: #000;
+	content: '/';
+	font-size: 1rem;
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
+
+.breadcrumb li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.breadcrumb li:last-child::before {
+	display: none;
+}
+
+.breadcrumb a {
+	color: #d2232a;
+	font-size: 1.15rem;
+	text-decoration: underline;
+}
+
+.breadcrumb a:hover {
+	color: #d2232a;
+}
+
+.breadcrumb span {
+	color: #000;
+	font-size: 1.15rem;
+}

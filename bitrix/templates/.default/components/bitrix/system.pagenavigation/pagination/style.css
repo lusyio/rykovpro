@@ -1,0 +1,38 @@
+/*---------------------------
+	PAGINATION
+---------------------------*/
+
+.pagination {
+	justify-content: center;
+	text-align: center;
+	padding: 25px 0;
+}
+
+.pagination span,
+.pagination a {
+	align-items: center;
+	background-color: #fff;
+	border-radius: 50%;
+	color: #333;
+	display: inline-flex;
+	line-height: 1;
+	justify-content: center;
+	margin: 0 5px;
+	transition: color .4s ease;
+	text-decoration: none;
+	height: 35px;
+	width: 35px;
+}
+
+.pagination span {
+	background-color: #d2232a;
+	color: #fff;
+}
+
+.pagination a:hover {
+	color: #d2232a;
+}
+
+.pagination a i {
+	font-size: 0.8rem;
+}

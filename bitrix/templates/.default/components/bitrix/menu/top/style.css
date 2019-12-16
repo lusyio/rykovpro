@@ -1,0 +1,143 @@
+/*---------------------------
+	HEADER MENU
+---------------------------*/
+
+.header-menu {
+	align-items: center;
+	display: flex;
+	flex-basis: auto;
+	min-height: 95px;
+}
+
+.header-menu-open {
+	align-items: center;
+	color: #fff;
+	cursor: pointer;
+	font-size: 0.85rem;
+	display: flex;
+	justify-content: flex-start;
+	color: #fff;
+	text-transform: uppercase;
+	min-height: 100%;
+}
+
+.header-menu-open i {
+	font-size: 1.4rem;
+	display: inline-flex;
+	margin-top: -3px;
+	margin-right: 15px;
+}
+
+.header-menu ul {
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header-menu li {
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	padding: 0 13px;
+	min-height: 95px;
+}
+
+.header-menu li:last-child {
+	margin-right: 0;
+}
+
+.header-menu a {
+	color: #fff;
+	font-size: 1.055rem;
+	transition: color .4s ease;
+}
+
+.header-menu a:hover {
+	color: #d2232a;
+}
+
+.header-menu .active {
+	background-color: #d2232a;
+}
+
+.header-menu .active a {
+	color: #fff;
+}
+
+@media(max-width: 991px) {
+
+	.header-menu {
+		min-height: 55px;
+	}
+
+	.header-menu ul {
+		display: none;
+	}
+
+}
+
+.header-menu._open nav {
+	background-color: #333;
+	display: block;
+	position: fixed;
+	top: 55px;
+	left: 0px;
+	width: 100%;
+	z-index: 100;
+}
+
+.header-menu._open ul {
+	/*border-top: 1px solid rgba(255, 255, 255, .15);*/
+	display: block;
+	padding: 15px 0;
+}
+
+.header-menu._open li {
+	border-bottom: 1px solid #484848;
+	display: block;
+	padding: 15px 0;
+	min-height: auto;
+}
+
+.header-menu._open li:last-child {
+	border-bottom: none;
+}
+
+
+.header-menu._open li.active {
+	background-color: transparent;
+}
+
+.header-menu._open li.active a {
+	color: #d2232a;
+}
+
+@media(max-width: 991px) {
+
+	.header-menu._open ul {
+		margin: 0 auto;
+		max-width: 690px;
+	}
+
+}
+
+@media(max-width: 767px) {
+
+	.header-menu._open ul {
+		margin: 0 auto;
+		max-width: 510px;
+	}
+
+}
+
+
+@media(max-width: 575px) {
+
+	.header-menu._open ul {
+		margin: 0 15px;
+		max-width: 100%;
+	}
+
+}
