@@ -11,6 +11,13 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$banner = '';
+if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
+    $banners = require $_SERVER['DOCUMENT_ROOT'].'/bitrix/templates/.default/components/bitrix/banner/banner.php';
+    if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
+        $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']]['html'];
+    }
+}
 ?>
 
 <div class = "publications-detail">
@@ -64,7 +71,8 @@ $this->setFrameMode(true);
 			<?=$arResult["DETAIL_TEXT"];?>
 		</div>
 	<?endif;?>
-	<?if($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]):?>
+    <?=$banner?>
+    <?if($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]):?>
 		<div class = "publications-detail-docs">
 		<h4>Документы публикации</h4>
 		<div class = "row">
