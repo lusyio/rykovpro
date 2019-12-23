@@ -9,9 +9,33 @@
 /** @var string $templateFile */
 /** @var string $templateFolder */
 /** @var string $componentPath */
-/** @var CBitrixComponent $component */
+/** @var CBitrixComponent $component */ 
 $this->setFrameMode(true);
 $banner = '';
+
+// ОГЛАВЛЕНИЕ
+$listOfContent = '';
+// В массив h2Titles помещаем содержимое тегов h2, содержащихся в тексте статьи
+$h2Titles = [];
+preg_match_all('~<h2>(.+)</h2>~iU', $arResult["DETAIL_TEXT"], $h2Titles);
+
+//Создаем оглавение, если найден хоть один тег h2
+if (isset($h2Titles[1])) {
+    $ids = [];
+    $i = 1; // добавляем к каждому тегу h2 id="content{i}" а в массив ids записываем эти id
+    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h2~i', function () use(&$i, &$ids) {
+        $titleId = 'content' . $i++;
+        $ids[] = $titleId;
+        return '<h2 id="' . $titleId . '"';
+    }, $arResult["DETAIL_TEXT"]);
+    //Создаем html-код оглавления
+    $listOfContent = '<ul>';
+    foreach ($ids as $key => $id) {
+        $listOfContent .= '<li><a href="#' . $id . '">'. $h2Titles[1][$key] .'</a></li>';
+    }
+    $listOfContent .= '</ul>';
+}
+
 if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
     $banners = require $_SERVER['DOCUMENT_ROOT'].'/bitrix/templates/.default/components/bitrix/banner/banner.php';
     if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
