@@ -103,30 +103,30 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
         <div class="col-12 col-md-12 pr-0 order-1 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
-                <div class="publications-detail-advice">
-                    <div class="row">
-                        <div class="col-3">
-                            <img class="advice-img"
-                                 src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
-                                 alt="rykov">
-                        </div>
-                        <div class="col">
-                            <div class="publications-detail-advice-body">
-                                <h3>Как не попасть на субсидиарку?</h3>
-                                <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
-                                    предпринимателей.</p>
-                                <div class="input-group">
-                                    <input type="text" class="form-control advice-input" placeholder="Введите ваш email"
-                                           aria-label="Введите ваш email" aria-describedby="adviceBtn">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline" type="button" id="adviceBtn">Подписаться
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="publications-detail-advice">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-3">-->
+<!--                            <img class="advice-img"-->
+<!--                                 src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"-->
+<!--                                 alt="rykov">-->
+<!--                        </div>-->
+<!--                        <div class="col">-->
+<!--                            <div class="publications-detail-advice-body">-->
+<!--                                <h3>Как не попасть на субсидиарку?</h3>-->
+<!--                                <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для-->
+<!--                                    предпринимателей.</p>-->
+<!--                                <div class="input-group">-->
+<!--                                    <input type="text" class="form-control advice-input" placeholder="Введите ваш email"-->
+<!--                                           aria-label="Введите ваш email" aria-describedby="adviceBtn">-->
+<!--                                    <div class="input-group-append">-->
+<!--                                        <button class="btn btn-outline" type="button" id="adviceBtn">Подписаться-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>

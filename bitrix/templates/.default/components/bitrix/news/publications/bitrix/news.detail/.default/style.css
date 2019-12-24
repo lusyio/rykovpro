@@ -267,6 +267,7 @@
     margin: 0;
     list-style: none;
     padding: 30px;
+    width: 100%;
 }
 
 .publications-detail-sidebar > ul > p{
