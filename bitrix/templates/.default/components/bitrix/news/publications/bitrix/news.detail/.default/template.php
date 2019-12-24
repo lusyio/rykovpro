@@ -75,7 +75,7 @@ $matchesCount = preg_match_all('~<h([2-3]{1})>(.+)</h~iU', $arResult["DETAIL_TEX
 if ($matchesCount > 0) {
     $ids = [];
     $i = 1; // Добавляем к каждому тегу h2 и h3 id="content{i}" а в массив ids записываем эти id
-    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h[2-3]{1}~i', function ($hValue) use(&$i, &$ids) {
+    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h([2-3]{1})~i', function ($hValue) use(&$i, &$ids) {
         $titleId = 'content' . $i++;
         $ids[] = $titleId;
         return '<h' . $hValue[1] . ' id="' . $titleId . '"';
@@ -96,6 +96,7 @@ if ($matchesCount > 0) {
     }
     $listOfContentHtml .= '</ul>';
 }
+
 // КОНЕЦ БЛОКА ГЕНЕРАЦИИ ОГЛАВЛЕНИЯ
 
 //БЛОК ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ - html-код баннера в переменной $banner
