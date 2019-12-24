@@ -267,16 +267,13 @@
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
     position: relative;
-    padding: 40px;
-    margin-bottom: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.publications-detail-text .notice:before {
-    content: '';
-    padding: 10px;
-    width: 100%;
-    height: 100%;
+.publications-detail-text .notice > div {
     border: 1px dashed #EEEEEE;
+    padding: 30px;
 }
 
 .publications-detail-text .notice b {
