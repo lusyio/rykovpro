@@ -26,6 +26,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->SetAdditionalCSS(PLUGINS."/icomoon-1.0.0/css/icomoon.css");?>
 		<?$APPLICATION->SetAdditionalCSS(PLUGINS."/slick-1.8.1/css/slick.css");?>
 		<?$APPLICATION->SetAdditionalCSS(ASSETS."/css/global.css");?>
+		<?$APPLICATION->SetAdditionalCSS(ASSETS."/css/font-awesome.min.css");?>
 		<?$APPLICATION->AddHeadScript(PLUGINS."/jquery-3.4.1/js/jquery.min.js");?>
 		<?$APPLICATION->AddHeadScript(PLUGINS."/slick-1.8.1/js/slick.min.js");?>
 		<?$APPLICATION->AddHeadScript(ASSETS."/js/global.js");?>
