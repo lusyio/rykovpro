@@ -284,45 +284,45 @@
 					<div class = "row">
 						<div class = "col-12">
 							<div class = "footer-contacts">
-								<p><b>Пресс-секретарь: </b></p>
-								<ul>
-									<li>
-										<?$APPLICATION->IncludeComponent(
-											"bitrix:main.include",
-											"",
-											Array(
-												"AREA_FILE_SHOW" => "file",
-												"AREA_FILE_SUFFIX" => "inc",
-												"EDIT_TEMPLATE" => "",
-												"PATH" => INC."/footer-fio.php"
-											)
-										);?>
-									</li>
-									<li>
-										<?$APPLICATION->IncludeComponent(
-											"bitrix:main.include",
-											"",
-											Array(
-												"AREA_FILE_SHOW" => "file",
-												"AREA_FILE_SUFFIX" => "inc",
-												"EDIT_TEMPLATE" => "",
-												"PATH" => INC."/footer-phone.php"
-											)
-										);?>
-									</li>
-									<li>
-										<?$APPLICATION->IncludeComponent(
-											"bitrix:main.include",
-											"",
-											Array(
-												"AREA_FILE_SHOW" => "file",
-												"AREA_FILE_SUFFIX" => "inc",
-												"EDIT_TEMPLATE" => "",
-												"PATH" => INC."/footer-email.php"
-											)
-										);?>
-									</li>
-								</ul>
+<!--								<p><b>Пресс-секретарь: </b></p>-->
+<!--								<ul>-->
+<!--									<li>-->
+<!--										--><?//$APPLICATION->IncludeComponent(
+//											"bitrix:main.include",
+//											"",
+//											Array(
+//												"AREA_FILE_SHOW" => "file",
+//												"AREA_FILE_SUFFIX" => "inc",
+//												"EDIT_TEMPLATE" => "",
+//												"PATH" => INC."/footer-fio.php"
+//											)
+//										);?>
+<!--									</li>-->
+<!--									<li>-->
+<!--										--><?//$APPLICATION->IncludeComponent(
+//											"bitrix:main.include",
+//											"",
+//											Array(
+//												"AREA_FILE_SHOW" => "file",
+//												"AREA_FILE_SUFFIX" => "inc",
+//												"EDIT_TEMPLATE" => "",
+//												"PATH" => INC."/footer-phone.php"
+//											)
+//										);?>
+<!--									</li>-->
+<!--									<li>-->
+<!--										--><?//$APPLICATION->IncludeComponent(
+//											"bitrix:main.include",
+//											"",
+//											Array(
+//												"AREA_FILE_SHOW" => "file",
+//												"AREA_FILE_SUFFIX" => "inc",
+//												"EDIT_TEMPLATE" => "",
+//												"PATH" => INC."/footer-email.php"
+//											)
+//										);?>
+<!--									</li>-->
+<!--								</ul>-->
 							</div>
 						</div>
 					</div>
