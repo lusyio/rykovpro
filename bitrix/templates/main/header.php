@@ -30,7 +30,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->AddHeadScript(PLUGINS."/jquery-3.4.1/js/jquery.min.js");?>
 		<?$APPLICATION->AddHeadScript(PLUGINS."/slick-1.8.1/js/slick.min.js");?>
 		<?$APPLICATION->AddHeadScript(ASSETS."/js/global.js");?>
-		<link rel = "shortcut icon" type = "image/x-icon" href = "/favicon.png">
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/favicon.ico">
+		<link rel = "icon" type = "image/x-icon" href = "/favicon.ico">
 	</head>
 	<body>
 		<?if($USER->IsAdmin()):?>
