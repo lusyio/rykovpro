@@ -14,26 +14,34 @@ $this->setFrameMode(true);
 $banner = '';
 
 // ОГЛАВЛЕНИЕ
-$listOfContent = '';
+$listOfContentHtml = '';
 // В массив h2Titles помещаем содержимое тегов h2, содержащихся в тексте статьи
-$h2Titles = [];
-preg_match_all('~<h2>(.+)</h2>~iU', $arResult["DETAIL_TEXT"], $h2Titles);
-
-//Создаем оглавение, если найден хоть один тег h2
-if (isset($h2Titles[1])) {
+$hTitles = [];
+$matchesCount = preg_match_all('~<h([2-3]{1})>(.+)</h~iU', $arResult["DETAIL_TEXT"], $hTitles);
+// Создаем оглавение, если найден хоть один тег h2 или h3
+if ($matchesCount > 0) {
     $ids = [];
-    $i = 1; // добавляем к каждому тегу h2 id="content{i}" а в массив ids записываем эти id
-    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h2~i', function () use(&$i, &$ids) {
+    $i = 1; // Добавляем к каждому тегу h2 и h3 id="content{i}" а в массив ids записываем эти id
+    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h[2-3]{1}~i', function ($hValue) use(&$i, &$ids) {
         $titleId = 'content' . $i++;
         $ids[] = $titleId;
-        return '<h2 id="' . $titleId . '"';
+        return '<h' . $hValue[1] . ' id="' . $titleId . '"';
     }, $arResult["DETAIL_TEXT"]);
-    //Создаем html-код оглавления
-    $listOfContent = '<ul>';
+
+    // Создаем html-код оглавления
+    $listOfContentHtml .= '<ul>';
+    $isInside = false;
     foreach ($ids as $key => $id) {
-        $listOfContent .= '<li><a href="#' . $id . '">'. $h2Titles[1][$key] .'</a></li>';
+        if ($hTitles[1][$key] == 3 && !$isInside) { // Если первый вложенный заголовок
+            $isInside = true;
+            $listOfContentHtml .= '<ul>';
+        } elseif ($hTitles[1][$key] == 2 && $isInside) { // Если предыдущий заголовок вложенный, а текущий - нет
+            $isInside = false;
+            $listOfContentHtml .= '</ul>';
+        }
+        $listOfContentHtml .= '<li><a href="#' . $id . '">'. $hTitles[2][$key] .'</a></li>';
     }
-    $listOfContent .= '</ul>';
+    $listOfContentHtml .= '</ul>';
 }
 
 if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
