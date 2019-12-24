@@ -124,7 +124,7 @@ if ($codesCount > 0) {
 $listOfContentHtml = '';
 // В массив hTitles помещаем массив с содержимым тегов h2 и h3 и массив со значениями 2 и 3, содержащихся в тексте статьи
 $hTitles = [];
-$matchesCount = preg_match_all('~<h([2-3]{1})>(.+)</h~iU', $arResult["DETAIL_TEXT"], $hTitles);
+$matchesCount = preg_match_all('~<h([2-3]{1}).{0,}>(.+)</h~iU', $arResult["DETAIL_TEXT"], $hTitles);
 // Создаем оглавение, если найден хоть один тег h2 или h3
 if ($matchesCount > 0) {
     $ids = [];
