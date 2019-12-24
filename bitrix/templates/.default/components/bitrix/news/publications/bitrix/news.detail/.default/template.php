@@ -11,11 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */ 
 $this->setFrameMode(true);
-$banner = '';
 
-// ОГЛАВЛЕНИЕ
+// БЛОК ГЕНЕРАЦИИ ОГЛАВЛЕНИЯ - html-код оглавления в переменной $listOfContentHtml
 $listOfContentHtml = '';
-// В массив h2Titles помещаем содержимое тегов h2, содержащихся в тексте статьи
+// В массив hTitles помещаем массив с содержимым тегов h2 и h3 и массив со значениями 2 и 3, содержащихся в тексте статьи
 $hTitles = [];
 $matchesCount = preg_match_all('~<h([2-3]{1})>(.+)</h~iU', $arResult["DETAIL_TEXT"], $hTitles);
 // Создаем оглавение, если найден хоть один тег h2 или h3
@@ -43,13 +42,18 @@ if ($matchesCount > 0) {
     }
     $listOfContentHtml .= '</ul>';
 }
+// КОНЕЦ БЛОКА ГЕНЕРАЦИИ ОГЛАВЛЕНИЯ
 
+//БЛОК ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ - html-код баннера в переменной $banner
+$banner = '';
 if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
     $banners = require $_SERVER['DOCUMENT_ROOT'].'/bitrix/templates/.default/components/bitrix/banner/banner.php';
     if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
         $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']]['html'];
     }
 }
+//КОНЕЦ БЛОКа ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ
+
 ?>
 
 <div class = "publications-detail">
