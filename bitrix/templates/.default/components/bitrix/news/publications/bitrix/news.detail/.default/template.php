@@ -12,6 +12,60 @@
 /** @var CBitrixComponent $component */ 
 $this->setFrameMode(true);
 
+
+/**
+ * Возвращает html-код блока "Рекомендую"
+ * @param $publicationId
+ * @return false|string
+ */
+function getRecommended($publicationId)
+{
+    global $templateFolder;
+    if (CModule::IncludeModule("iblock") && CModule::IncludeModule("main")) {
+        $recommendedResult = CIBlockElement::GetByID($publicationId)->getNext();
+        if (!$recommendedResult) {
+            return '';
+        }
+        $recommendedPicture = CFile::GetPath($recommendedResult['DETAIL_PICTURE']);
+        if (!$recommendedPicture) {
+            $recommendedPicture = $templateFolder . "/img/default.jpg";
+        }
+        ob_start();
+        ?>
+        <div class="publications-detail-picture" data-img="<?= $recommendedPicture; ?>">
+            <span>
+                <p>Также рекомендую прочитать эту статью</p>
+            </span>
+            <h1><?= $recommendedResult["NAME"]; ?></h1>
+            <span>
+                <p>
+                <?= $recommendedResult["PREVIEW_TEXT"]; ?>
+                </p>
+                <p>
+                <a class="btn btn-primary btn-radius"
+                   href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
+                </p>
+            </span>
+        </div>
+        <?
+        return ob_get_clean();
+    }
+    return '';
+}
+
+// БЛОК ОБРАБОТКИ ШОРТКОДОВ
+$codes = [];
+$codesCount = preg_match_all('~\[recommend id=([0-9]{1,9})\]~iU', $arResult["DETAIL_TEXT"], $codes);
+if ($codesCount > 0) {
+    foreach ($codes[1] as $key => $value){
+        $html = getRecommended($value);
+        $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id='. $value .'\]~iU', $html, $arResult["DETAIL_TEXT"]);
+    }
+}
+// КОНЕЦ БЛОКА ОБРАБОТКИ ШОРТКОДОВ
+
+
+
 // БЛОК ГЕНЕРАЦИИ ОГЛАВЛЕНИЯ - html-код оглавления в переменной $listOfContentHtml
 $listOfContentHtml = '';
 // В массив hTitles помещаем массив с содержимым тегов h2 и h3 и массив со значениями 2 и 3, содержащихся в тексте статьи
