@@ -262,6 +262,88 @@
     color: #000000;
 }
 
+.publications-detail-text .notice {
+    background: #FFFEF8;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.publications-detail-text .notice:before {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #EEEEEE;
+}
+
+.publications-detail-text .notice b {
+    font-size: 18px;
+    line-height: 16px;
+    color: #000000;
+    padding: 40px;
+}
+
+.publications-detail-text .notice p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.publications-detail-text .notice a {
+    display: block;
+    margin-top: 25px;
+}
+
+.publications-detail-text blockquote {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    padding-left: 57px;
+    position: relative;
+}
+
+.publications-detail-text blockquote:before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 34px;
+    content: "\f10e";
+    color: #D2232A
+}
+
+.publications-detail-text .point {
+    background: #FAFAFA;
+    margin-bottom: 40px;
+    padding: 40px 50px;
+}
+
+.publications-detail-text .point p {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.publications-detail-text .point li {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.publications-detail-text .point li:last-of-type {
+    margin-bottom: 0;
+}
+
 .publications-detail-sidebar > ul {
     background: #FAFAFA;
     margin: 0;
@@ -270,7 +352,7 @@
     width: 100%;
 }
 
-.publications-detail-sidebar > ul > p{
+.publications-detail-sidebar > ul > p {
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
@@ -535,6 +617,10 @@
 }
 
 @media (max-width: 575px) {
+
+    .publications-detail-text table td {
+        display: table;
+    }
 
     .publications-detail-social h4 {
         margin-bottom: 0;
