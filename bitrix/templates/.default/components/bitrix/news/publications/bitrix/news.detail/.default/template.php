@@ -53,18 +53,72 @@ function getRecommended($publicationId)
     return '';
 }
 
+function getSubscribeForm()
+{
+    ob_start();
+    ?>
+    <div class="publications-detail-advice">
+        <div class="row">
+            <div class="col-3">
+                <img class="advice-img"
+                     src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
+                     alt="rykov">
+            </div>
+            <div class="col">
+                <div class="publications-detail-advice-body">
+                    <h3>Как не попасть на субсидиарку?</h3>
+                    <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
+                        предпринимателей.</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control advice-input" placeholder="Введите ваш email"
+                               aria-label="Введите ваш email" aria-describedby="adviceBtn">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline" type="button" id="adviceBtn">Подписаться
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?
+    return ob_get_clean();
+}
+
 // БЛОК ОБРАБОТКИ ШОРТКОДОВ
+// шорткод [recommend id={publicationId}]
 $codes = [];
-$codesCount = preg_match_all('~\[recommend id=([0-9]{1,9})\]~iU', $arResult["DETAIL_TEXT"], $codes);
+$codesCount = preg_match_all('~\[recommend id=([0-9]{1,9})\]~U', $arResult["DETAIL_TEXT"], $codes);
 if ($codesCount > 0) {
     foreach ($codes[1] as $key => $value){
         $html = getRecommended($value);
         $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id='. $value .'\]~iU', $html, $arResult["DETAIL_TEXT"]);
     }
 }
+
+// шорткод [test id={testId}]
+$codes = [];
+$codesCount = preg_match_all('~\[test id=([0-9a-zA-Z]{1,9})\]~U', $arResult["DETAIL_TEXT"], $codes);
+if ($codesCount > 0) {
+    $tests = require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/.default/components/bitrix/tests/tests.php';
+    foreach ($codes[1] as $key => $value){
+        if (key_exists($value, $tests)) {
+            $html = $tests[$value];
+            $arResult["DETAIL_TEXT"] = preg_replace('~\[test id='. $value .'\]~iU', $html, $arResult["DETAIL_TEXT"]);
+        }
+    }
+}
+
+// шорткод [subscribe]
+$codes = [];
+$codesCount = preg_match_all('~\[subscribe\]~U', $arResult["DETAIL_TEXT"], $codes);
+if ($codesCount > 0) {
+    foreach ($codes[0] as $key => $value){
+        $html = getSubscribeForm();
+        $arResult["DETAIL_TEXT"] = preg_replace('~\[subscribe\]~iU', $html, $arResult["DETAIL_TEXT"]);
+    }
+}
 // КОНЕЦ БЛОКА ОБРАБОТКИ ШОРТКОДОВ
-
-
 
 // БЛОК ГЕНЕРАЦИИ ОГЛАВЛЕНИЯ - html-код оглавления в переменной $listOfContentHtml
 $listOfContentHtml = '';
@@ -158,30 +212,6 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
         <div class="col-12 col-md-12 pr-0 order-1 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
-<!--                <div class="publications-detail-advice">-->
-<!--                    <div class="row">-->
-<!--                        <div class="col-3">-->
-<!--                            <img class="advice-img"-->
-<!--                                 src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"-->
-<!--                                 alt="rykov">-->
-<!--                        </div>-->
-<!--                        <div class="col">-->
-<!--                            <div class="publications-detail-advice-body">-->
-<!--                                <h3>Как не попасть на субсидиарку?</h3>-->
-<!--                                <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для-->
-<!--                                    предпринимателей.</p>-->
-<!--                                <div class="input-group">-->
-<!--                                    <input type="text" class="form-control advice-input" placeholder="Введите ваш email"-->
-<!--                                           aria-label="Введите ваш email" aria-describedby="adviceBtn">-->
-<!--                                    <div class="input-group-append">-->
-<!--                                        <button class="btn btn-outline" type="button" id="adviceBtn">Подписаться-->
-<!--                                        </button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
