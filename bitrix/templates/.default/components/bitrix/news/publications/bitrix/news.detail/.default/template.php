@@ -189,7 +189,7 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
     </div>
     <div class="row">
         <div class="col-lg-1 d-none order-2 d-lg-flex"></div>
-        <div class="col-12 col-lg-4 order-3 d-none d-lg-flex">
+        <div class="col-12 col-lg-4 order-3 d-lg-flex">
             <div class="publications-detail-sidebar">
                 <?= $listOfContentHtml ?>
                 <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["VALUE"] as $key => $value): ?>
@@ -209,7 +209,7 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
                 <? endforeach; ?>
             </div>
         </div>
-        <div class="col-12 col-md-12 pr-0 order-1 col-lg-7">
+        <div class="col-12 col-md-12 pr-unset pr-lg-0 order-1 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
             </div>
