@@ -84,7 +84,7 @@
     letter-spacing: 2px;
     min-height: 38px;
     width: 100%;
-    max-width: 480px;
+    max-width: 680px;
 }
 
 .publications-detail-picture h1::before {
@@ -213,7 +213,7 @@
 }
 
 .publications-detail-text h2 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 2.125rem;
     color: #000000;
@@ -221,7 +221,7 @@
 }
 
 .publications-detail-text h3 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.875rem;
     color: #000000;
@@ -229,7 +229,7 @@
 }
 
 .publications-detail-text h4 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.625rem;
     color: #000000;
@@ -280,7 +280,7 @@
 }
 
 .publications-detail-text .notice b {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 16px;
     color: #000000;
     margin-bottom: 15px;
@@ -289,7 +289,7 @@
 
 .publications-detail-text .notice p {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 28px;
     color: #000000;
     margin-bottom: 15px;
@@ -302,7 +302,7 @@
 
 .publications-detail-text blockquote {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 18px;
     color: #000000;
     padding-left: 57px;
@@ -315,7 +315,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 34px;
+    font-size: 2.125rem;
     content: "\f10e";
     color: #D2232A
 }
@@ -327,8 +327,8 @@
 }
 
 .publications-detail-text .point p {
-    font-weight: normal;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 1.5rem;
     line-height: 29px;
     color: #000000;
     padding-bottom: 30px;
@@ -338,7 +338,7 @@
 
 .publications-detail-text .point li {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 28px;
     color: #000000;
     margin-bottom: 30px;
@@ -357,8 +357,8 @@
 }
 
 .publications-detail-sidebar > ul > p {
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 1rem;
     line-height: 19px;
     color: #000000;
     margin-bottom: 23px;
@@ -540,7 +540,7 @@
 
 .publications-detail-advice p {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 24px;
     color: #FFFFFF;
     margin-bottom: 30px;
@@ -548,7 +548,7 @@
 
 .publications-detail-advice h3 {
     font-weight: normal;
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 34px;
     color: #FFFFFF;
     margin-bottom: 10px;
@@ -562,7 +562,7 @@
 
 #adviceBtn {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 19px;
     color: #FFFFFF;
     background: #D2232A;
@@ -572,7 +572,7 @@
 
 .advice-input::placeholder {
     font-weight: 300;
-    font-size: 13px;
+    font-size: 0.875rem;
     line-height: 19px;
     color: #C5C5C5;
 }
