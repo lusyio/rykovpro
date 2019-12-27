@@ -156,14 +156,16 @@ if ($matchesCount > 0) {
 
 //БЛОК ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ - html-код баннера в переменной $banner
 $banner = '';
-if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
-    $banners = require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/.default/components/bitrix/banner/banner.php';
-    if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
-        $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']]['html'];
-    }
-}
-//КОНЕЦ БЛОКа ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ
+$banners = require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/.default/components/bitrix/banner/banner.php';
 
+if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
+    if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
+        $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']];
+    }
+} else {
+    $banner = $banners['default'];
+}
+//КОНЕЦ БЛОКА ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ
 ?>
 
 <div class="publications-detail">
@@ -192,6 +194,7 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
         <div class="col-12 col-lg-4 order-3 d-lg-flex">
             <div class="publications-detail-sidebar">
                 <?= $listOfContentHtml ?>
+                <?= $banner ?>
                 <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["VALUE"] as $key => $value): ?>
                     <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["DESCRIPTION"][$key]): ?>
                         <div class="publications-detail-banner">
@@ -215,7 +218,6 @@ if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
             </div>
         </div>
     </div>
-    <?= $banner ?>
     <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
     <div class="publications-detail-docs">
         <h4>Документы публикации</h4>
