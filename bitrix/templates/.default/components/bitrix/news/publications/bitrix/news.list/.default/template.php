@@ -73,8 +73,21 @@ $this->setFrameMode(true);
 					<?$picture = $picture['src'];?>
 					<?$alt = $arItem['PREVIEW_PICTURE']['ALT'];?>
 				<?else:?>
-					<?$picture = $templateFolder."/img/default.jpg";?>
-					<?$alt = $arItem["NAME"];?>
+                    <?$alt = $arItem["NAME"];?>
+                    <?//БЛОК ПОЛУЧЕНИЯ ID ДЕТАЛЬНОГО ИЗОБРАЖЕНИЯ?>
+                    <?if (CModule::IncludeModule("iblock")):?>
+                        <?$article = CIBlockElement::GetByID($arItem['ID'])->getNext();?>
+                        <? if ($article):?>
+                            <?$detailPictureId =  $article['DETAIL_PICTURE'];?>
+                        <?endif;?>
+                    <?endif;?>
+                    <?//КОНЕЦ БЛОКА ПОЛУЧЕНИЯ ID ДЕТАЛЬНОГО ИЗОБРАЖЕНИЯ?>
+                        <?if($arParams["DISPLAY_PICTURE"] != "N" && isset($detailPictureId) && !is_null($detailPictureId)):?>
+                        <?$picture = CFile::ResizeImageGet(CFile::getFileArray($detailPictureId), array("width" => 525, "height" => 325), BX_RESIZE_IMAGE_EXACT);?>
+                        <?$picture = $picture['src'];?>
+                    <?else:?>
+                        <?$picture = $templateFolder."/img/default.jpg";?>
+                    <?endif;?>
 				<?endif;?>
 				<div class = "col-12 col-sm-12 col-md-6">
 					<div id = "<?=$this->GetEditAreaId($arItem['ID']);?>" class = "publications-list-item">
