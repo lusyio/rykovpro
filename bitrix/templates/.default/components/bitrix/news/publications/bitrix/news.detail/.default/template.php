@@ -32,20 +32,17 @@ function getRecommended($publicationId)
         }
         ob_start();
         ?>
-        <div class="publications-detail-picture" data-img="<?= $recommendedPicture; ?>">
-            <span>
-                <p>Также рекомендую прочитать эту статью</p>
-            </span>
+        <div class="publications-detail-picture">
+            <img src="<?= $recommendedPicture; ?>" alt="">
+            <div class="publications-detail-picture-body">
+            <p>Также рекомендую прочитать эту статью</p>
             <h1><?= $recommendedResult["NAME"]; ?></h1>
-            <span>
-                <p>
+            <p>
                 <?= $recommendedResult["PREVIEW_TEXT"]; ?>
-                </p>
-                <p>
-                <a class="btn btn-primary btn-radius"
-                   href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
-                </p>
-            </span>
+            </p>
+            <a class="btn btn-primary btn-radius"
+               href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
+            </div>
         </div>
         <?
         return ob_get_clean();
@@ -69,19 +66,31 @@ function getSubscribeForm()
                     <h3>Как не попасть на субсидиарку?</h3>
                     <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
                         предпринимателей.</p>
-                    <div class="input-group">
-                        <input type="text" class="form-control advice-input" placeholder="Введите ваш email"
-                               aria-label="Введите ваш email" aria-describedby="adviceBtn">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline" type="button" id="adviceBtn">Подписаться
-                            </button>
+                    <form method="POST"
+                          action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                          name="subscribtion_form">
+                        <div class="input-group">
+                            <div class="subscribe-form-item subscribe-form-item--input-email">
+                                <input
+                                    class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                    placeholder="Введите ваш email" type="text" name="email" value="">
+                            </div>
+                            <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
+                                <input
+                                    class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                    type="submit" value="Подписаться">
+                            </div>
+                            <input type="hidden" name="charset" value="UTF-8">
+                            <input type="hidden" name="default_list_id" value="19581681">
+                            <input type="hidden" name="overwrite" value="2">
+                            <input type="hidden" name="is_v5" value="1">
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-<?
+    <?
     return ob_get_clean();
 }
 
@@ -90,9 +99,9 @@ function getSubscribeForm()
 $codes = [];
 $codesCount = preg_match_all('~\[recommend id=([0-9]{1,9})\]~U', $arResult["DETAIL_TEXT"], $codes);
 if ($codesCount > 0) {
-    foreach ($codes[1] as $key => $value){
+    foreach ($codes[1] as $key => $value) {
         $html = getRecommended($value);
-        $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id='. $value .'\]~iU', $html, $arResult["DETAIL_TEXT"]);
+        $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id=' . $value . '\]~iU', $html, $arResult["DETAIL_TEXT"]);
     }
 }
 
@@ -101,10 +110,10 @@ $codes = [];
 $codesCount = preg_match_all('~\[test id=([0-9a-zA-Z]{1,9})\]~U', $arResult["DETAIL_TEXT"], $codes);
 if ($codesCount > 0) {
     $tests = require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/.default/components/bitrix/tests/tests.php';
-    foreach ($codes[1] as $key => $value){
+    foreach ($codes[1] as $key => $value) {
         if (key_exists($value, $tests)) {
             $html = $tests[$value];
-            $arResult["DETAIL_TEXT"] = preg_replace('~\[test id='. $value .'\]~iU', $html, $arResult["DETAIL_TEXT"]);
+            $arResult["DETAIL_TEXT"] = preg_replace('~\[test id=' . $value . '\]~iU', $html, $arResult["DETAIL_TEXT"]);
         }
     }
 }
@@ -113,7 +122,7 @@ if ($codesCount > 0) {
 $codes = [];
 $codesCount = preg_match_all('~\[subscribe\]~U', $arResult["DETAIL_TEXT"], $codes);
 if ($codesCount > 0) {
-    foreach ($codes[0] as $key => $value){
+    foreach ($codes[0] as $key => $value) {
         $html = getSubscribeForm();
         $arResult["DETAIL_TEXT"] = preg_replace('~\[subscribe\]~iU', $html, $arResult["DETAIL_TEXT"]);
     }
@@ -129,7 +138,7 @@ $matchesCount = preg_match_all('~<h([2-3]{1}).{0,}>(.+)</h~iU', $arResult["DETAI
 if ($matchesCount > 0) {
     $ids = [];
     $i = 1; // Добавляем к каждому тегу h2 и h3 id="content{i}" а в массив ids записываем эти id
-    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h([2-3]{1})~i', function ($hValue) use(&$i, &$ids) {
+    $arResult["DETAIL_TEXT"] = preg_replace_callback('~<h([2-3]{1})~i', function ($hValue) use (&$i, &$ids) {
         $titleId = 'content' . $i++;
         $ids[] = $titleId;
         return '<h' . $hValue[1] . ' id="' . $titleId . '"';

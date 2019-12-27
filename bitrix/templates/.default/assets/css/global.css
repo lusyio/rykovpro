@@ -34,6 +34,14 @@
 
 @font-face {
 	font-family: 'Museo Sans Cyrl';
+	src: url("../fonts/MuseoSansCyrl/500.eot");
+	src: url("../fonts/MuseoSansCyrl/500.woff") format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans Cyrl';
 	src: url("../fonts/MuseoSansCyrl/700.eot");
 	src: url("../fonts/MuseoSansCyrl/700.woff") format('woff');
 	font-weight: 700;
