@@ -166,11 +166,9 @@ if ($matchesCount > 0) {
 //БЛОК ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ - html-код баннера в переменной $banner
 $banner = '';
 $banners = require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/templates/.default/components/bitrix/banner/banner.php';
-
-if (isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER'])) {
-    if (isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']])) {
-        $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']];
-    }
+$hasSpecifiedBanner = isset($arResult['PROPERTIES']['PUBLICATIONS_BANNER']) && isset($banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']]);
+if ($hasSpecifiedBanner) {
+    $banner = $banners[$arResult['PROPERTIES']['PUBLICATIONS_BANNER']['VALUE_XML_ID']];
 } else {
     $banner = $banners['default'];
 }
