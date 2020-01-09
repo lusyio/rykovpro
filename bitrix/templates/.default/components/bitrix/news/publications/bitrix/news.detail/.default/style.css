@@ -358,12 +358,12 @@
 }
 
 .publications-detail-text blockquote:before {
-    font-family: "Font Awesome 5 Free";
+    font-family: "icomoon";
     top: 0;
     font-weight: 900;
     left: 0;
     font-size: 2.125rem;
-    content: "\f10e";
+    content: "\e907";
     color: #D2232A;
     display: inline-block;
     font-style: normal;
@@ -401,11 +401,99 @@
     margin-bottom: 0;
 }
 
+.publications-detail-quiz {
+    background: #FAFAFA;
+    padding: 40px 65px 45px 50px;
+}
+
+.publications-detail-quiz__title {
+    font-size: 1.5rem;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.publications-detail-quiz__desc {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.publications-detail-quiz__desc strong {
+    font-weight: normal;
+}
+
+.publications-detail-quiz__question {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.publications-detail-quiz__answer label {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: #000000;
+    margin-left: 15px;
+}
+
+.publications-detail-quiz__answer-container {
+    margin-bottom: 40px;
+}
+
+.publications-detail-quiz__answer {
+    margin-bottom: 15px;
+}
+
+.publications-detail-quiz__btn {
+    background: #D2232A;
+    border-radius: 30px;
+    padding: 12px 23px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.publications-detail-quiz__FB {
+    background: #4267B2;
+    margin-bottom: 15px;
+}
+
+.publications-detail-quiz__or {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.publications-detail-quiz__btn:disabled {
+    background: #BCBCBC;
+    cursor: not-allowed;
+}
+
+.publications-detail-quiz__number {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D2232A;
+}
+
+.publications-detail-quiz__hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-color: #E8E8E8;
+}
+
 .publications-detail-sidebar {
     width: 100%;
 }
 
-.publications-detail-sidebar > ul{
+.publications-detail-sidebar > ul {
     background: #FAFAFA;
     margin: 0;
     list-style: none;
@@ -413,7 +501,7 @@
     width: 100%;
 }
 
-.publications-detail-sidebar > ul ul{
+.publications-detail-sidebar > ul ul {
     background: #FAFAFA;
     margin: 0;
     list-style: none;

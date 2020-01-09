@@ -35,13 +35,13 @@ function getRecommended($publicationId)
         <div class="publications-detail-picture">
             <img src="<?= $recommendedPicture; ?>" alt="">
             <div class="publications-detail-picture-body">
-            <p>Также рекомендую прочитать эту статью</p>
-            <h1><?= $recommendedResult["NAME"]; ?></h1>
-            <p>
-                <?= $recommendedResult["PREVIEW_TEXT"]; ?>
-            </p>
-            <a class="btn btn-primary btn-radius"
-               href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
+                <p>Также рекомендую прочитать эту статью</p>
+                <h1><?= $recommendedResult["NAME"]; ?></h1>
+                <p>
+                    <?= $recommendedResult["PREVIEW_TEXT"]; ?>
+                </p>
+                <a class="btn btn-primary btn-radius"
+                   href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
             </div>
         </div>
         <?
@@ -72,13 +72,13 @@ function getSubscribeForm()
                         <div class="input-group">
                             <div class="subscribe-form-item subscribe-form-item--input-email">
                                 <input
-                                    class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                    placeholder="Введите ваш email" type="text" name="email" value="">
+                                        class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                        placeholder="Введите ваш email" type="text" name="email" value="">
                             </div>
                             <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
                                 <input
-                                    class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                    type="submit" value="Подписаться">
+                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                        type="submit" value="Подписаться">
                             </div>
                             <input type="hidden" name="charset" value="UTF-8">
                             <input type="hidden" name="default_list_id" value="19581681">
@@ -222,6 +222,119 @@ if ($hasSpecifiedBanner) {
         <div class="col-12 col-md-12 pr-unset pr-lg-0 order-1 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
+            </div>
+
+            <div class="publications-detail-quiz">
+                <p class="publications-detail-quiz__title">
+                    Грозит ли вам субсидиарная ответственность?
+                </p>
+                <hr class="publications-detail-quiz__hr">
+                <p class="publications-detail-quiz__desc">
+                    Пройдите тест из 10 вопросов, чтобы узнать о своей ситуации. По итогам теста вы <strong>узнаете в
+                        какой
+                        группе риска вы находитесь</strong> (критическая, высокая, невысокая), и в соответствии с ней
+                    <strong>получите
+                        рекомендации по мерам защиты</strong> от субсидиарной ответственности
+                </p>
+                <hr class="publications-detail-quiz__hr">
+                <div class="publications-detail-quiz__container">
+                    <div class="publications-detail-quiz__question-container">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                    class="publications-detail-quiz__number">№1</span> Как давно у контрагента возникла
+                            задолженность перед Вами?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="6">
+                                <label for="answers">От 1-го до 3-х месяцев</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="3">
+                                <label for="answers">От 3-х до 6-ти месяцев</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="2">
+                                <label for="answers">От 6-ти месяцев до 1-го года</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="1">
+                                <label for="answers">От 1-го года до 3-х лет</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="0">
+                                <label for="answers">Задолженность старше 3-х лет</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                    class="publications-detail-quiz__number">№2</span> Подтверждается ли имеющаяся
+                            задолженность документально (договора, акты и т.п.)?
+
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="6">
+                                <label for="answers">Да, подтверждается, все документы в соответствующем виде
+                                    имеются</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="2">
+                                <label for="answers">Нет, подтверждающих документов нет, задолженность возникла на
+                                    основании неформальных договоренностей. Должник признает задолженность и готов её
+                                    формализовать</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="0">
+                                <label for="answers">Нет, подтверждающих документов нет, задолженность возникла на
+                                    основании неформальных договоренностей. Должник не признает задолженность</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers" name="answers" value="3">
+                                <label for="answers">Да, имеется только договор между сторонами, формально задолженность
+                                    контрагентом не признана</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container end">
+                        <p class="publications-detail-quiz__question end">
+
+                        </p>
+                        <button class="publications-detail-quiz__FB publications-detail-quiz__FB">Задать мне вопрос на
+                            Facebook
+                        </button>
+                        <p class="publications-detail-quiz__or">или</p>
+                        <form
+                                method="POST"
+                                action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                                name="subscribtion_form"
+                        >
+                            <div class="subscribe-form-item subscribe-form-item--input-email">
+                                <input
+                                        class="subscribe-form-item__control subscribe-form-item__control--input-email"
+                                        type="text"
+                                        name="email"
+                                        value=""
+                                        placeholder="Введите ваш email"
+                                />
+                            </div>
+                            <div class="subscribe-form-item subscribe-form-item--btn-submit">
+                                <input
+                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
+                                        type="submit"
+                                        value="Подписаться"
+                                />
+                            </div>
+                            <input type="hidden" name="charset" value="UTF-8"/>
+                            <input type="hidden" name="default_list_id" value="19597957"/>
+                            <input type="hidden" name="overwrite" value="2"/>
+                            <input type="hidden" name="is_v5" value="1"/>
+                        </form>
+                    </div>
+                </div>
+                <button disabled id="nextQuestion" class="publications-detail-quiz__btn">Следующий вопрос</button>
             </div>
         </div>
     </div>
