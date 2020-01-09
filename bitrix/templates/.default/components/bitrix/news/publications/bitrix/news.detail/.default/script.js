@@ -11,24 +11,27 @@ $(function () {
         }
     });
 
-    $(document).onload(function () {
+    $(document).ready(function () {
         var totalScore = 0;
-        $('.publications-detail-quiz__answer input').each(function () {
-            if ($(this).is(':checked')) {
-                $('#nextQuestion').removeAttr('disabled')
-            }
-        });
-        $('#nextQuestion').on('click', function (e) {
-            e.prevent.default;
+        $('.publications-detail-quiz__answer input').on('change', function () {
             $('.publications-detail-quiz__answer input').each(function () {
                 if ($(this).is(':checked')) {
-                    let tempScore = $(this).value();
+                    $('#nextQuestion').removeAttr('disabled')
+                }
+            });
+        });
+        $('#nextQuestion').on('click', function (e) {
+            $('.publications-detail-quiz__answer input').each(function () {
+                if ($(this).is(':checked')) {
+                    let tempScore = Number($(this).attr('value'));
                     totalScore = totalScore + tempScore;
                     console.log(totalScore)
                 }
             });
-            $('.publications-detail-quiz__question-container:visible').addClass('d-none').next('.publications-detail-quiz__question-container').removeClass('d-none');
-            if ($('.publications-detail-quiz__question-container:visible').next('.publications-detail-quiz__question-container').hasClass('end')) {
+            var next = $('.publications-detail-quiz__question-container:visible').next('.d-none');
+            $('.publications-detail-quiz__question-container:visible').addClass('d-none');
+            next.removeClass('d-none')
+            if ($('.publications-detail-quiz__question-container.end').is(':visible')) {
                 let text;
                 let title;
                 if (totalScore >= 55) {
@@ -43,9 +46,11 @@ $(function () {
                     title = 'Установлена критически низкая вероятность взыскания задолженности';
                     text = 'Шансов взыскать задолженность очень мало. К сожалению, возможность решить все мирным путем уже упущена и остается предпрининять решительные меры. Я подготовил для вас серию писем, в которой подробно расписаны все шаги по взысканию задолженности. Оставьте свой email я пришлю вам план, с чего начать. Однако, в данной ситуации я настоятельно рекомендую обратиться за помощью к специалистам. Вы можете написать мне в facebook, чтобы я смог дать вам подробную консультацию.\n'
                 }
-                $('.publications-detail-quiz__question-container:visible').addClass('d-none');
                 $('.publications-detail-quiz__question.end').html(text);
+                $('#nextQuestion').addClass('d-none');
                 $('.publications-detail-quiz__title').html(title);
+                $('.publications-detail-quiz__desc').addClass('d-none')
+                $('.publications-detail-quiz__desc').next('hr').addClass('d-none')
             }
 
         })

@@ -230,7 +230,7 @@ if ($hasSpecifiedBanner) {
                 </p>
                 <hr class="publications-detail-quiz__hr">
                 <p class="publications-detail-quiz__desc">
-                    Пройдите тест из 10 вопросов, чтобы узнать о своей ситуации. По итогам теста вы <strong>узнаете в
+                    Пройдите тест из 11 вопросов, чтобы узнать о своей ситуации. По итогам теста вы <strong>узнаете в
                         какой
                         группе риска вы находитесь</strong> (критическая, высокая, невысокая), и в соответствии с ней
                     <strong>получите
@@ -245,24 +245,24 @@ if ($hasSpecifiedBanner) {
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="6">
-                                <label for="answers">От 1-го до 3-х месяцев</label>
+                                <input type="radio" id="answers44" name="answers" value="6">
+                                <label for="answers44">От 1-го до 3-х месяцев</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="3">
-                                <label for="answers">От 3-х до 6-ти месяцев</label>
+                                <input type="radio" id="answers45" name="answers" value="3">
+                                <label for="answers45">От 3-х до 6-ти месяцев</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="2">
-                                <label for="answers">От 6-ти месяцев до 1-го года</label>
+                                <input type="radio" id="answers46" name="answers" value="2">
+                                <label for="answers46">От 6-ти месяцев до 1-го года</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="1">
-                                <label for="answers">От 1-го года до 3-х лет</label>
+                                <input type="radio" id="answers47" name="answers" value="1">
+                                <label for="answers47">От 1-го года до 3-х лет</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="0">
-                                <label for="answers">Задолженность старше 3-х лет</label>
+                                <input type="radio" id="answers48" name="answers" value="0">
+                                <label for="answers48">Задолженность старше 3-х лет</label>
                             </div>
                         </div>
                     </div>
@@ -275,62 +275,280 @@ if ($hasSpecifiedBanner) {
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="6">
-                                <label for="answers">Да, подтверждается, все документы в соответствующем виде
+                                <input type="radio" id="answers40" name="answers" value="6">
+                                <label for="answers40">Да, подтверждается, все документы в соответствующем виде
                                     имеются</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="2">
-                                <label for="answers">Нет, подтверждающих документов нет, задолженность возникла на
+                                <input type="radio" id="answers41" name="answers" value="2">
+                                <label for="answers41">Нет, подтверждающих документов нет, задолженность возникла на
                                     основании неформальных договоренностей. Должник признает задолженность и готов её
                                     формализовать</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="0">
-                                <label for="answers">Нет, подтверждающих документов нет, задолженность возникла на
+                                <input type="radio" id="answers42" name="answers" value="0">
+                                <label for="answers42">Нет, подтверждающих документов нет, задолженность возникла на
                                     основании неформальных договоренностей. Должник не признает задолженность</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers" name="answers" value="3">
-                                <label for="answers">Да, имеется только договор между сторонами, формально задолженность
+                                <input type="radio" id="answers43" name="answers" value="3">
+                                <label for="answers43">Да, имеется только договор между сторонами, формально задолженность
                                     контрагентом не признана</label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="publications-detail-quiz__question-container end">
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№3</span> Обращались ли вы к Должнику с требованием о погашении задолженности?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers37" name="answers" value="4">
+                                <label for="answers37">Да, контрагент обещает оплатить, но так и не платит</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers38" name="answers" value="2">
+                                <label for="answers38">Да, но контрагент отрицает наличие задолженности или не реагирует на обращения</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers39" name="answers" value="0">
+                                <label for="answers39">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№4</span> Направляли ли Вы официальную письменную претензию в адрес Должника?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers1" name="answers" value="8">
+                                <label for="answers1">Да, официальная претензия направлена заказным письмом, подтверждающие документы в наличии</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers2" name="answers" value="4">
+                                <label for="answers2">Да, но подтверждение отправления утрачено</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers3" name="answers" value="1">
+                                <label for="answers3">Нет, не отправляли</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№5</span> Предоставлялось ли Должником обеспечение исполнения обязательств?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers4" name="answers" value="2">
+                                <label for="answers4">Нет, не предоставлялось</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers5" name="answers" value="4">
+                                <label for="answers5">Предоставлялось поручительство</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers6" name="answers" value="9">
+                                <label for="answers6">Залог имущества</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers7" name="answers" value="8">
+                                <label for="answers7">Независимая гарантия</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers8" name="answers" value="6">
+                                <label for="answers8">Иная форма обеспечения</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№6</span> Обращались ли Вы в суд с исковым заявлением к Должнику?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers9" name="answers" value="7">
+                                <label for="answers9">Да, обращались, вынесено решение суда в нашу пользу</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers10" name="answers" value="6">
+                                <label for="answers10">Да, исковое заявление на рассмотрении</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers11" name="answers" value="4">
+                                <label for="answers11">Нет, но исковое заявление будет подано в ближайшее время</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers12" name="answers" value="2">
+                                <label for="answers12">Нет, исковое заявление не готово, планируем проконсультироваться со специалистами</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№7</span> Процедуру взыскания задолженности с контрагента с Вашей стороны ведут:
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers13" name="answers" value="4">
+                                <label for="answers13">Юристы компании</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers14" name="answers" value="5">
+                                <label for="answers14">Привлеченные юристы</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers15" name="answers" value="7">
+                                <label for="answers15">Привлеченные юристы во взаимодействии с юристами компании</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers16" name="answers" value="3">
+                                <label for="answers16">Мы проводим процедуру своими силами без привлечения сторонних специалистов</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№8</span> Возбуждалось ли исполнительное производство в отношении контрагента по Вашему требованию?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers17" name="answers" value="3">
+                                <label for="answers17">Да, но выявить имущество не удалось</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers18" name="answers" value="5">
+                                <label for="answers18">Да, но процедура идёт медленно</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers19" name="answers" value="7">
+                                <label for="answers19">Да, но Должник активно противодействует процедуре, в связи с чем производство не результативно</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers20" name="answers" value="6">
+                                <label for="answers20">Да, но ввиду отсутствия опыта взаимодействия с судебными приставами, исполнительное производство не привело к результатам</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers21" name="answers" value="1">
+                                <label for="answers21">Нет, не возбуждалось</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№9</span> Возбуждено ли в отношении Вашего Должника дело о банкротстве?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers22" name="answers" value="3">
+                                <label for="answers22">Да, наши требования включены в реестр требований кредиторов, но арбитражный управляющий и Должник противодействуют -взысканию</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers23" name="answers" value="2">
+                                <label for="answers23">Да, но у Должника отсутствуют активы, за счет которых может быть погашена задолженность</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers24" name="answers" value="1">
+                                <label for="answers24">Да, но процедура ещё не введена</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers25" name="answers" value="4">
+                                <label for="answers25">Нет, но мы планируем обратиться с соответствующим заявлением</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers26" name="answers" value="5">
+                                <label for="answers26">Нет, не возбуждено</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers27" name="answers" value="7">
+                                <label for="answers27">Да, производство возбуждено по нашему заявлению</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№10</span> Ведет ли Должник деятельность на текущий момент, в том числе через аффилированные компании?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers28" name="answers" value="8">
+                                <label for="answers29">Да, деятельность ведется в обычном режиме</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers30" name="answers" value="6">
+                                <label for="answers30">Да, но деятельность прекращается</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers31" name="answers" value="4">
+                                <label for="answers31">Нет, деятельность прекращена</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers32" name="answers" value="2">
+                                <label for="answers32">Мы не обладаем данной информацией</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none">
+                        <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                                class="publications-detail-quiz__number">№11</span> Вам известны контролирующие лица Должника, конечные собственники бизнеса, а также имущественное состояние этих лиц?
+                        </p>
+                        <div class="publications-detail-quiz__answer-container">
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers33" name="answers" value="7">
+                                <label for="answers33">Да, известны. Они обладают значительным имуществом</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers34" name="answers" value="3">
+                                <label for="answers34">Да, известны, но они не обладают каким-либо имуществом</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers35" name="answers" value="4">
+                                <label for="answers35">Да, известны, но они напрямую не владеют своим имуществом</label>
+                            </div>
+                            <div class="publications-detail-quiz__answer">
+                                <input type="radio" id="answers36" name="answers" value="0">
+                                <label for="answers36">Нет, неизвестны</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="publications-detail-quiz__question-container d-none end">
                         <p class="publications-detail-quiz__question end">
 
                         </p>
-                        <button class="publications-detail-quiz__FB publications-detail-quiz__FB">Задать мне вопрос на
+                        <button class="publications-detail-quiz__btn publications-detail-quiz__FB">Задать мне вопрос на
                             Facebook
                         </button>
                         <p class="publications-detail-quiz__or">или</p>
-                        <form
-                                method="POST"
-                                action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                name="subscribtion_form"
-                        >
-                            <div class="subscribe-form-item subscribe-form-item--input-email">
-                                <input
-                                        class="subscribe-form-item__control subscribe-form-item__control--input-email"
-                                        type="text"
-                                        name="email"
-                                        value=""
-                                        placeholder="Введите ваш email"
-                                />
+                        <form method="POST"
+                              action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                              name="subscribtion_form">
+                            <div class="input-group ">
+                                <div class="subscribe-form-item subscribe-form-item--input-email">
+                                    <input
+                                        class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                        placeholder="Введите ваш email" type="text" name="email" value="">
+                                </div>
+                                <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
+                                    <input
+                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                        type="submit" value="Подписаться">
+                                </div>
+                                <input type="hidden" name="charset" value="UTF-8">
+                                <input type="hidden" name="default_list_id" value="19581681">
+                                <input type="hidden" name="overwrite" value="2">
+                                <input type="hidden" name="is_v5" value="1">
                             </div>
-                            <div class="subscribe-form-item subscribe-form-item--btn-submit">
-                                <input
-                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
-                                        type="submit"
-                                        value="Подписаться"
-                                />
-                            </div>
-                            <input type="hidden" name="charset" value="UTF-8"/>
-                            <input type="hidden" name="default_list_id" value="19597957"/>
-                            <input type="hidden" name="overwrite" value="2"/>
-                            <input type="hidden" name="is_v5" value="1"/>
                         </form>
                     </div>
                 </div>
