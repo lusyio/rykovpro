@@ -11,6 +11,14 @@ $(function () {
         }
     });
 
+    var $page = $('html, body');
+    $('.publications-detail-sidebar a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+        return false;
+    });
+
     $(document).ready(function () {
         var totalScore = 0;
         $('.publications-detail-quiz__answer input').on('change', function () {
