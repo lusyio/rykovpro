@@ -889,6 +889,16 @@
     }
 }
 
+@media screen and (max-width: 768px){
+    .publications-detail-quiz__question-container .input-group {
+        width: 100%;
+    }
+
+    .publications-detail-quiz__FB{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .subscribe-form-item--btn-submit {
         display: block;
@@ -908,14 +918,6 @@
         position: unset;
         display: block;
         margin: auto;
-    }
-
-    .publications-detail-quiz__question-container .input-group {
-        width: 100%;
-    }
-
-    .publications-detail-quiz__FB{
-        width: 100%;
     }
 }
 
