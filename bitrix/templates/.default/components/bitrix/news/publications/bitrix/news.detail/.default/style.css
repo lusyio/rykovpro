@@ -357,6 +357,10 @@
     font-size: 0.875rem;
 }
 
+.publications-detail-text .publications-detail-picture a:hover{
+    text-decoration: none;
+}
+
 .publications-detail-text blockquote:before {
     font-family: "icomoon";
     top: 0;
@@ -745,6 +749,7 @@
 }
 
 .form-control.advice-input {
+    border: none;
     background: #FFFFFF;
     border-radius: 35px !important;
     padding: 8px 23px;
@@ -785,12 +790,20 @@
     margin-top: 30px;
 }
 
-.download-form{
-   text-align: center;
+.download-form {
+    text-align: center;
     margin-top: 30px;
 }
 
-.subscribe-form img, .download-form img{
+.download-form form {
+    position: relative;
+}
+
+.download-form .subscribe-form-item--btn-submit input, .subscribe-form .subscribe-form-item--btn-submit input{
+    left: -20px;
+}
+
+.subscribe-form img, .download-form img {
     margin-bottom: 20px;
 }
 
@@ -837,7 +850,6 @@
     border: none;
     padding: 8px 18px;
     position: relative;
-    left: -20px;
     cursor: pointer;
     outline: none;
     transition: all 1s ease-out;
