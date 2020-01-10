@@ -12,7 +12,7 @@ $(function () {
     });
 
     var $page = $('html, body');
-    $('.publications-detail-sidebar a[href*="#"]').click(function() {
+    $('.publications-detail-sidebar a[href*="#"]').click(function () {
         $page.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 400);
@@ -22,11 +22,7 @@ $(function () {
     $(document).ready(function () {
         var totalScore = 0;
         $('.publications-detail-quiz__answer input').on('change', function () {
-            $('.publications-detail-quiz__answer input').each(function () {
-                if ($(this).is(':checked')) {
-                    $('#nextQuestion').removeAttr('disabled')
-                }
-            });
+            $('#nextQuestion').removeAttr('disabled')
         });
         $('#nextQuestion').on('click', function (e) {
             $('.publications-detail-quiz__answer input').each(function () {
@@ -57,10 +53,11 @@ $(function () {
                 $('.publications-detail-quiz__question.end').html(text);
                 $('#nextQuestion').addClass('d-none');
                 $('.publications-detail-quiz__title').html(title);
-                $('.publications-detail-quiz__desc').addClass('d-none')
+                $('.publications-detail-quiz__desc').addClass('d-none');
                 $('.publications-detail-quiz__desc').next('hr').addClass('d-none')
             }
-
+            $('.publications-detail-quiz__answer input:checked').prop('checked', false);
+            $('#nextQuestion').prop('disabled', true)
         })
     })
 });
