@@ -411,14 +411,14 @@
     margin-bottom: 40px;
 }
 
-.publications-detail-quiz__title {
+.publications-detail-quiz .publications-detail-quiz__title {
     font-size: 1.5rem;
     line-height: 29px;
     color: #000000;
     margin-bottom: 0;
 }
 
-.publications-detail-quiz__desc {
+.publications-detail-quiz .publications-detail-quiz__desc {
     font-weight: 300;
     font-size: 0.875rem;
     line-height: 17px;
@@ -426,11 +426,11 @@
     margin-bottom: 0;
 }
 
-.publications-detail-quiz__desc strong {
+.publications-detail-quiz .publications-detail-quiz__desc strong {
     font-weight: normal;
 }
 
-.publications-detail-quiz__question {
+.publications-detail-quiz__question-container .publications-detail-quiz__question {
     font-weight: normal;
     font-size: 0.875rem;
     line-height: 17px;
@@ -491,7 +491,7 @@
 
 .publications-detail-quiz__number {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 17px;
     color: #D2232A;
 }
