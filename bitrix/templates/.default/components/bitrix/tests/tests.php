@@ -62,18 +62,19 @@ ob_start();
                         <span>Нет, подтверждающих документов нет, задолженность возникла на
                                         основании неформальных договоренностей. Должник признает задолженность и готов её
                                         формализовать</span>
-                </div>
-                <label class="publications-detail-quiz__answer pure-material-radio" for="answers42">
-                    <input type="radio" id="answers42" name="answers" value="0">
-                    <span>Нет, подтверждающих документов нет, задолженность возникла на
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers42">
+                        <input type="radio" id="answers42" name="answers" value="0">
+                        <span>Нет, подтверждающих документов нет, задолженность возникла на
                                         основании неформальных договоренностей. Должник не признает задолженность</span>
-                </label>
-                <label class="publications-detail-quiz__answer pure-material-radio" for="answers43">
-                    <input type="radio" id="answers43" name="answers" value="3">
-                    <span>Да, имеется только договор между сторонами, формально
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers43">
+                        <input type="radio" id="answers43" name="answers" value="3">
+                        <span>Да, имеется только договор между сторонами, формально
                                         задолженность
                                         контрагентом не признана</span>
-                </label>
+                    </label>
+                </div>
             </div>
 
             <div class="publications-detail-quiz__question-container d-none">
@@ -84,7 +85,7 @@ ob_start();
                 <div class="publications-detail-quiz__answer-container">
                     <label class="publications-detail-quiz__answer pure-material-radio" for="answers37">
                         <input type="radio" id="answers37" name="answers" value="4">
-                        <span >Да, контрагент обещает оплатить, но так и не платит</span>
+                        <span>Да, контрагент обещает оплатить, но так и не платит</span>
                     </label>
                     <label class="publications-detail-quiz__answer pure-material-radio" for="answers38">
                         <input type="radio" id="answers38" name="answers" value="2">
@@ -354,7 +355,7 @@ ob_start();
 $tests['test1'] = ob_get_clean();
 ob_start();
 ?>
-<div>Тест 2</div>
+    <div>Тест 2</div>
 <?
 $tests['test2'] = ob_get_clean();
 
