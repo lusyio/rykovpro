@@ -443,7 +443,7 @@
     font-size: 0.875rem;
     line-height: 17px;
     color: #000000;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .publications-detail-quiz__answer label:hover {
@@ -456,7 +456,7 @@
 
 .publications-detail-quiz__answer {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .publications-detail-quiz__btn {
