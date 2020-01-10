@@ -198,7 +198,7 @@ if ($hasSpecifiedBanner) {
     </div>
     <div class="row">
         <div class="col-lg-1 d-none order-2 d-lg-flex"></div>
-        <div class="col-12 col-lg-4 order-3 d-lg-flex">
+        <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-flex">
             <div class="publications-detail-sidebar">
                 <?= $listOfContentHtml ?>
                 <?= $banner ?>
@@ -217,9 +217,26 @@ if ($hasSpecifiedBanner) {
                         </div>
                     <? endif; ?>
                 <? endforeach; ?>
+                <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
+                    <h4>Документы публикации</h4>
+                    <div class="row">
+                        <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["VALUE"] as $key => $value): ?>
+                            <div class="col-6 col-sm-4 col-md-3">
+                                <div class="publications-detail-docs-item">
+                                    <? if (is_array($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"][0])): ?>
+                                        <? $file_name = $arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"][$key]["ORIGINAL_NAME"]; ?>
+                                    <? else: ?>
+                                        <? $file_name = $arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"]["ORIGINAL_NAME"]; ?>
+                                    <? endif; ?>
+                                    <a href="<?= CFile::GetPath($value); ?>" target="_blank"><?= $file_name; ?></a>
+                                </div>
+                            </div>
+                        <? endforeach; ?>
+                    </div>
+                <? endif; ?>
             </div>
         </div>
-        <div class="col-12 col-md-12 pr-unset pr-lg-0 order-1 col-lg-7">
+        <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
             </div>
@@ -292,7 +309,8 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers43" name="answers" value="3">
-                                <label for="answers43">Да, имеется только договор между сторонами, формально задолженность
+                                <label for="answers43">Да, имеется только договор между сторонами, формально
+                                    задолженность
                                     контрагентом не признана</label>
                             </div>
                         </div>
@@ -300,7 +318,8 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№3</span> Обращались ли вы к Должнику с требованием о погашении задолженности?
+                                    class="publications-detail-quiz__number">№3</span> Обращались ли вы к Должнику с
+                            требованием о погашении задолженности?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -309,7 +328,8 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers38" name="answers" value="2">
-                                <label for="answers38">Да, но контрагент отрицает наличие задолженности или не реагирует на обращения</label>
+                                <label for="answers38">Да, но контрагент отрицает наличие задолженности или не реагирует
+                                    на обращения</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers39" name="answers" value="0">
@@ -320,12 +340,14 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№4</span> Направляли ли Вы официальную письменную претензию в адрес Должника?
+                                    class="publications-detail-quiz__number">№4</span> Направляли ли Вы официальную
+                            письменную претензию в адрес Должника?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers1" name="answers" value="8">
-                                <label for="answers1">Да, официальная претензия направлена заказным письмом, подтверждающие документы в наличии</label>
+                                <label for="answers1">Да, официальная претензия направлена заказным письмом,
+                                    подтверждающие документы в наличии</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers2" name="answers" value="4">
@@ -340,7 +362,8 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№5</span> Предоставлялось ли Должником обеспечение исполнения обязательств?
+                                    class="publications-detail-quiz__number">№5</span> Предоставлялось ли Должником
+                            обеспечение исполнения обязательств?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -368,7 +391,8 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№6</span> Обращались ли Вы в суд с исковым заявлением к Должнику?
+                                    class="publications-detail-quiz__number">№6</span> Обращались ли Вы в суд с исковым
+                            заявлением к Должнику?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -385,14 +409,16 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers12" name="answers" value="2">
-                                <label for="answers12">Нет, исковое заявление не готово, планируем проконсультироваться со специалистами</label>
+                                <label for="answers12">Нет, исковое заявление не готово, планируем проконсультироваться
+                                    со специалистами</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№7</span> Процедуру взыскания задолженности с контрагента с Вашей стороны ведут:
+                                    class="publications-detail-quiz__number">№7</span> Процедуру взыскания задолженности
+                            с контрагента с Вашей стороны ведут:
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -409,14 +435,16 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers16" name="answers" value="3">
-                                <label for="answers16">Мы проводим процедуру своими силами без привлечения сторонних специалистов</label>
+                                <label for="answers16">Мы проводим процедуру своими силами без привлечения сторонних
+                                    специалистов</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№8</span> Возбуждалось ли исполнительное производство в отношении контрагента по Вашему требованию?
+                                    class="publications-detail-quiz__number">№8</span> Возбуждалось ли исполнительное
+                            производство в отношении контрагента по Вашему требованию?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -429,11 +457,13 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers19" name="answers" value="7">
-                                <label for="answers19">Да, но Должник активно противодействует процедуре, в связи с чем производство не результативно</label>
+                                <label for="answers19">Да, но Должник активно противодействует процедуре, в связи с чем
+                                    производство не результативно</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers20" name="answers" value="6">
-                                <label for="answers20">Да, но ввиду отсутствия опыта взаимодействия с судебными приставами, исполнительное производство не привело к результатам</label>
+                                <label for="answers20">Да, но ввиду отсутствия опыта взаимодействия с судебными
+                                    приставами, исполнительное производство не привело к результатам</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers21" name="answers" value="1">
@@ -444,16 +474,19 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№9</span> Возбуждено ли в отношении Вашего Должника дело о банкротстве?
+                                    class="publications-detail-quiz__number">№9</span> Возбуждено ли в отношении Вашего
+                            Должника дело о банкротстве?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers22" name="answers" value="3">
-                                <label for="answers22">Да, наши требования включены в реестр требований кредиторов, но арбитражный управляющий и Должник противодействуют -взысканию</label>
+                                <label for="answers22">Да, наши требования включены в реестр требований кредиторов, но
+                                    арбитражный управляющий и Должник противодействуют -взысканию</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers23" name="answers" value="2">
-                                <label for="answers23">Да, но у Должника отсутствуют активы, за счет которых может быть погашена задолженность</label>
+                                <label for="answers23">Да, но у Должника отсутствуют активы, за счет которых может быть
+                                    погашена задолженность</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers24" name="answers" value="1">
@@ -461,7 +494,8 @@ if ($hasSpecifiedBanner) {
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers25" name="answers" value="4">
-                                <label for="answers25">Нет, но мы планируем обратиться с соответствующим заявлением</label>
+                                <label for="answers25">Нет, но мы планируем обратиться с соответствующим
+                                    заявлением</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
                                 <input type="radio" id="answers26" name="answers" value="5">
@@ -476,11 +510,12 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№10</span> Ведет ли Должник деятельность на текущий момент, в том числе через аффилированные компании?
+                                    class="publications-detail-quiz__number">№10</span> Ведет ли Должник деятельность на
+                            текущий момент, в том числе через аффилированные компании?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
-                                <input type="radio" id="answers28" name="answers" value="8">
+                                <input type="radio" id="answers29" name="answers" value="8">
                                 <label for="answers29">Да, деятельность ведется в обычном режиме</label>
                             </div>
                             <div class="publications-detail-quiz__answer">
@@ -500,7 +535,8 @@ if ($hasSpecifiedBanner) {
 
                     <div class="publications-detail-quiz__question-container d-none">
                         <p id="quizQuestion" class="publications-detail-quiz__question"><span
-                                class="publications-detail-quiz__number">№11</span> Вам известны контролирующие лица Должника, конечные собственники бизнеса, а также имущественное состояние этих лиц?
+                                    class="publications-detail-quiz__number">№11</span> Вам известны контролирующие лица
+                            Должника, конечные собственники бизнеса, а также имущественное состояние этих лиц?
                         </p>
                         <div class="publications-detail-quiz__answer-container">
                             <div class="publications-detail-quiz__answer">
@@ -536,13 +572,13 @@ if ($hasSpecifiedBanner) {
                             <div class="input-group ">
                                 <div class="subscribe-form-item subscribe-form-item--input-email">
                                     <input
-                                        class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                        placeholder="Введите ваш email" type="text" name="email" value="">
+                                            class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                            placeholder="Введите ваш email" type="text" name="email" value="">
                                 </div>
                                 <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
                                     <input
-                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                        type="submit" value="Подписаться">
+                                            class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                            type="submit" value="Подписаться">
                                 </div>
                                 <input type="hidden" name="charset" value="UTF-8">
                                 <input type="hidden" name="default_list_id" value="19581681">
@@ -556,24 +592,7 @@ if ($hasSpecifiedBanner) {
             </div>
         </div>
     </div>
-    <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
     <div class="publications-detail-docs">
-        <h4>Документы публикации</h4>
-        <div class="row">
-            <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["VALUE"] as $key => $value): ?>
-                <div class="col-6 col-sm-4 col-md-3">
-                    <div class="publications-detail-docs-item">
-                        <? if (is_array($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"][0])): ?>
-                            <? $file_name = $arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"][$key]["ORIGINAL_NAME"]; ?>
-                        <? else: ?>
-                            <? $file_name = $arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]["FILE_VALUE"]["ORIGINAL_NAME"]; ?>
-                        <? endif; ?>
-                        <a href="<?= CFile::GetPath($value); ?>" target="_blank"><?= $file_name; ?></a>
-                    </div>
-                </div>
-            <? endforeach; ?>
-        </div>
-        <? endif; ?>
         <div class="publications-detail-social">
             <h4>поделиться в социальных сетях:</h4>
             <div class="row">

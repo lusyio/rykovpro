@@ -818,6 +818,36 @@
 
 @media (max-width: 575px) {
 
+    .publications-detail-picture {
+        padding: 36px 20px 36px 50px;
+    }
+
+    .publications-detail-picture h1 {
+        font-size: 1rem;
+        line-height: 21px;
+        width: unset;
+    }
+
+    .publications-detail-picture-body {
+        padding: 50px;
+    }
+
+    .publications-detail-text .point {
+        padding: 25px 30px;
+    }
+
+    .publications-detail-text ol, .publications-detail-text ul {
+        padding-left: 20px;
+    }
+
+    .publications-detail-quiz {
+        padding: 35px 40px 35px 40px;
+    }
+
+    .publications-detail-text .notice > div {
+        padding: 20px;
+    }
+
     .publications-detail-text table td {
         display: table;
     }
