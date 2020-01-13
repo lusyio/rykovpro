@@ -18,7 +18,7 @@ $this->setFrameMode(true);
  * @param $publicationId
  * @return false|string
  */
-function getRecommended($publicationId)
+function getRecommended($publicationId, $imageAlt = '')
 {
     global $templateFolder;
     if (CModule::IncludeModule("iblock") && CModule::IncludeModule("main")) {
@@ -33,7 +33,7 @@ function getRecommended($publicationId)
         ob_start();
         ?>
         <div class="publications-detail-picture">
-            <img src="<?= $recommendedPicture; ?>" alt="">
+            <img src="<?= $recommendedPicture; ?>" alt="<?=$imageAlt?>" title="<?=$imageAlt?>">
             <div class="publications-detail-picture-body">
                 <p>Также рекомендую прочитать эту статью</p>
                 <h1><?= $recommendedResult["NAME"]; ?></h1>
@@ -100,7 +100,7 @@ $codes = [];
 $codesCount = preg_match_all('~\[recommend id=([0-9]{1,9})\]~U', $arResult["DETAIL_TEXT"], $codes);
 if ($codesCount > 0) {
     foreach ($codes[1] as $key => $value) {
-        $html = getRecommended($value);
+        $html = getRecommended($value, $arResult['NAME']);
         $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id=' . $value . '\]~iU', $html, $arResult["DETAIL_TEXT"]);
     }
 }
