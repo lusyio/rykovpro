@@ -323,10 +323,6 @@ ob_start();
                 <p class="publications-detail-quiz__question end">
 
                 </p>
-                <button class="publications-detail-quiz__btn publications-detail-quiz__FB">Задать мне вопрос на
-                    Facebook
-                </button>
-                <p class="publications-detail-quiz__or">или</p>
                 <form method="POST"
                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                       name="subscribtion_form">
