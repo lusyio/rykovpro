@@ -219,7 +219,8 @@ if ($hasSpecifiedBanner) {
                 <? endforeach; ?>
                 <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
                     <div class="download-form">
-                        <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/download-file.png" alt="Скачать файлы">
+                        <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/download-file.png"
+                             alt="Скачать файлы">
                         <p>Скачайте образец документа {название документа} в формате .docx </p>
                         <form
                                 method="POST"
@@ -286,3 +287,4 @@ if ($hasSpecifiedBanner) {
             </div>
         </div>
     </div>
+</div>
