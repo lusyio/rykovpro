@@ -280,7 +280,7 @@ if ($hasSpecifiedBanner) {
                             <p class="publications-detail-author__title text-md-left text-center">
                                 Рыков Иван
                             </p>
-                            <p class="publications-detail-author__description ml-md-unset mr-md-unset ml-auto mr-auto text-md-left text-center">
+                            <p class="publications-detail-author__description ml-md-0 mr-md-0 ml-auto mr-auto text-md-left text-center">
                                 Основатель антикризисной юридической компании «Рыков групп»
                             </p>
                             <p class="publications-detail-author__spec">
