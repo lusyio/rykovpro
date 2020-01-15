@@ -4,15 +4,14 @@ ob_start();
 ?>
     <div class="publications-detail-quiz">
         <p class="publications-detail-quiz__title">
-            Грозит ли вам субсидиарная ответственность?
+            Определите вероятность взыскания дебиторской задолженности с вашего должника
         </p>
         <hr class="publications-detail-quiz__hr">
         <p class="publications-detail-quiz__desc">
-            Пройдите тест из 11 вопросов, чтобы узнать о своей ситуации. По итогам теста вы <strong>узнаете в
-                какой
-                группе риска вы находитесь</strong> (критическая, высокая, невысокая), и в соответствии с ней
-            <strong>получите
-                рекомендации по мерам защиты</strong> от субсидиарной ответственности
+            Ответив на <strong>11 вопросов</strong>, вы получите <strong>экспертную оценку права требования и
+                вероятности его взыскания</strong>, а также
+            рекомендации по дальнейшим действиям от экспертов по взысканию. После этого, сможете определить, насколько
+            оперативно необходимо решать проблему, ведь промедление - это потеря ваших денег.
         </p>
         <hr class="publications-detail-quiz__hr">
         <div class="publications-detail-quiz__container">
@@ -323,10 +322,6 @@ ob_start();
                 <p class="publications-detail-quiz__question end">
 
                 </p>
-                <button class="publications-detail-quiz__btn publications-detail-quiz__FB">Задать мне вопрос на
-                    Facebook
-                </button>
-                <p class="publications-detail-quiz__or">или</p>
                 <form method="POST"
                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                       name="subscribtion_form">
