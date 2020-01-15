@@ -81,7 +81,7 @@ function getSubscribeForm()
                                         type="submit" value="Подписаться">
                             </div>
                             <input type="hidden" name="charset" value="UTF-8">
-                            <input type="hidden" name="default_list_id" value="19581681">
+                            <input type="hidden" name="default_list_id" value="19751373">
                             <input type="hidden" name="overwrite" value="2">
                             <input type="hidden" name="is_v5" value="1">
                         </div>
