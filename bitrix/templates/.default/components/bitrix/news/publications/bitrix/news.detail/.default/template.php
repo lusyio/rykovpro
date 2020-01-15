@@ -33,7 +33,7 @@ function getRecommended($publicationId, $imageAlt = '')
         ob_start();
         ?>
         <div class="publications-detail-picture">
-            <img src="<?= $recommendedPicture; ?>" alt="<?=$imageAlt?>" title="<?=$imageAlt?>">
+            <img src="<?= $recommendedPicture; ?>" alt="<?= $imageAlt ?>" title="<?= $imageAlt ?>">
             <div class="publications-detail-picture-body">
                 <p>Также рекомендую прочитать эту статью</p>
                 <h1><?= $recommendedResult["NAME"]; ?></h1>
@@ -56,7 +56,7 @@ function getSubscribeForm()
     ?>
     <div class="publications-detail-advice">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 col-12 text-md-left text-center">
                 <img class="advice-img"
                      src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
                      alt="rykov">
@@ -255,6 +255,43 @@ if ($hasSpecifiedBanner) {
         <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
+                <div class="publications-detail-author">
+                    <div class="row">
+                        <div class="col-md-3 col-12 text-md-left text-center mb-md-0 mb-4">
+                            <img class="author-img"
+                                 src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
+                                 alt="rykov">
+                            <div class="publications-detail__socials">
+                                <a href="https://www.facebook.com/profile.php?id=100004443691615">
+                                    <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/facebook-social.svg"
+                                         alt="facebook-social">
+                                </a>
+                                <a href="mailto:rykovpro@gmail.com">
+                                    <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/gmail-social.svg"
+                                         alt="gmail-social">
+                                </a>
+                                <a href="https://instagram.com/rykov.pro">
+                                    <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/instagram-social.svg"
+                                         alt="instagram-social">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="publications-detail-author__title">
+                                Рыков Иван
+                            </p>
+                            <p class="publications-detail-author__description">
+                                Основатель антикризисной юридической компании «Рыков групп»
+                            </p>
+                            <p class="publications-detail-author__spec">
+                                <strong>Специализации:</strong> антикризисное управление и банкротство крупных
+                                предприятий и организаций;
+                                управление проблемными активами; взыскание дебиторской задолженности, деятельность
+                                коллекторов; субсидиарная ответственность по обязательствам должника.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
