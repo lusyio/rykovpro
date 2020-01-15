@@ -834,7 +834,16 @@
 }
 
 .publications-detail-author .publications-detail__socials img {
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -ms-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
     margin-bottom: 0;
+}
+
+.publications-detail-author .publications-detail__socials a:hover img {
+    transform: translateY(5px);
 }
 
 .publications-detail-author .author-img {
@@ -952,6 +961,10 @@
 
     .publications-detail-quiz__FB {
         width: 100%;
+    }
+
+    .publications-detail-author .publications-detail-author__description:after {
+        margin: auto;
     }
 }
 
