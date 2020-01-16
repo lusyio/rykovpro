@@ -63,7 +63,7 @@ function getSubscribeForm()
             </div>
             <div class="col">
                 <div class="publications-detail-advice-body">
-                    <h3>Как не попасть на субсидиарку?</h3>
+                    <p class="h3">Как не попасть под субсидиарку?</p>
                     <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
                         предпринимателей.</p>
                     <form method="POST"

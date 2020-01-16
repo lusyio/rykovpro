@@ -714,7 +714,7 @@
 }
 
 .publications-detail-advice-body {
-    padding: 27px 25px 35px 0;
+    padding: 27px 25px 35px 25px;
 }
 
 .publications-detail-quiz__question-container .input-group {
@@ -740,7 +740,7 @@
     margin-bottom: 30px;
 }
 
-.publications-detail-advice h3 {
+.publications-detail-advice .h3 {
     font-weight: normal;
     font-size: 1.75rem;
     line-height: 34px;
@@ -967,7 +967,7 @@
         display: none;
     }
 
-    .publications-detail-advice h3 {
+    .publications-detail-advice .h3 {
         text-align: center;
         margin-bottom: 15px;
         font-weight: normal;
