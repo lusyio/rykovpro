@@ -1009,6 +1009,18 @@
     .publications-detail-author .publications-detail-author__description:after {
         margin: auto;
     }
+
+    .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .input-group-append {
+        width: 100%;
+    }
+
+    .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .input-group-append {
+        width: 100%;
+    }
+
+    .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .subscribe-form-item > input::placeholder {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -1021,9 +1033,14 @@
         margin-bottom: 30px;
     }
 
+    .subscribe-form-item__control--input-email::placeholder {
+        text-align: center;
+    }
+
     .download-form .subscribe-form-item--btn-submit input, .subscribe-form .subscribe-form-item--btn-submit input {
         left: unset;
         position: unset;
+        width: 100%;
     }
 }
 
@@ -1163,7 +1180,7 @@
         padding: 27px 25px 35px 20px;
     }
 
-    .publications-detail-advice-body .input-group{
+    .publications-detail-advice-body .input-group {
         width: 100%;
     }
 }
@@ -1217,6 +1234,12 @@
 }
 
 @media (max-width: 575px) {
+
+    .subscribe-form-item--btn-submit {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .publications-detail-picture {
         padding: 36px 20px 36px 50px;
