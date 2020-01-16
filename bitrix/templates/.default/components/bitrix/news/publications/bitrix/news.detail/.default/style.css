@@ -963,6 +963,49 @@
         width: 100%;
     }
 
+    .publications-detail-advice .advice-img {
+        display: none;
+    }
+
+    .publications-detail-advice h3 {
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: normal;
+        font-size: 22px;
+    }
+
+    .publications-detail-advice p {
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .publications-detail-advice-body .input-group .advice-input::placeholder {
+        text-align: center;
+    }
+
+    .publications-detail-advice-body .input-group .subscribe-form-item > input {
+        width: 100%;
+    }
+
+    .publications-detail-advice-body .input-group .subscribe-form-item {
+        width: 100%;
+    }
+
+    .publications-detail-advice-body .input-group {
+        width: 100%;
+    }
+
+    .publications-detail-advice {
+        background: #252525;
+    }
+
+    .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .input-group-append {
+        position: unset;
+        display: block;
+        margin: auto;
+    }
+
     .publications-detail-author .publications-detail-author__description:after {
         margin: auto;
     }
@@ -981,12 +1024,6 @@
     .download-form .subscribe-form-item--btn-submit input, .subscribe-form .subscribe-form-item--btn-submit input {
         left: unset;
         position: unset;
-    }
-
-    .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .input-group-append {
-        position: unset;
-        display: block;
-        margin: auto;
     }
 }
 
@@ -1121,6 +1158,16 @@
 # RADIO BTN
 --------------------------------------------------------------*/
 
+@media screen and (max-width: 1200px) and (min-width: 991px) {
+    .publications-detail-advice-body {
+        padding: 27px 25px 35px 20px;
+    }
+
+    .publications-detail-advice-body .input-group{
+        width: 100%;
+    }
+}
+
 @media (max-width: 991px) {
 
     .publications-detail-social-item {
@@ -1159,7 +1206,7 @@
     }
 
     .publications-detail-advice-body {
-        padding: 27px 20px 35px 20px;
+        padding: 25px;
     }
 
     .publications-detail-advice-body .input-group {

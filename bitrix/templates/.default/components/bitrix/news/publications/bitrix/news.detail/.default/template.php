@@ -56,7 +56,7 @@ function getSubscribeForm()
     ?>
     <div class="publications-detail-advice">
         <div class="row">
-            <div class="col-md-3 col-12 text-md-left text-center">
+            <div class="col-md-4 col-xl-3 col-12 text-md-left text-center">
                 <img class="advice-img"
                      src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
                      alt="rykov">
