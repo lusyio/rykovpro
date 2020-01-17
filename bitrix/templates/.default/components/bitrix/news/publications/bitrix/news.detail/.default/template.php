@@ -255,6 +255,13 @@ if ($hasSpecifiedBanner) {
         <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">
             <div class="publications-detail-text">
                 <?= $arResult["DETAIL_TEXT"]; ?>
+                <div class="publications-detail-share">
+                    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                    <script src="https://yastatic.net/share2/share.js"></script>
+                    <p>Понравилась статья? Расскажи об этом друзьям</p>
+                    <div class="ya-share2 text-center"
+                         data-services="vkontakte,facebook,odnoklassniki,moimir,evernote,linkedin,whatsapp,telegram"></div>
+                </div>
                 <div class="publications-detail-author">
                     <div class="row">
                         <div class="col-md-3 col-12 text-md-left text-center mb-md-0 mb-4">
@@ -262,7 +269,7 @@ if ($hasSpecifiedBanner) {
                                  src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
                                  alt="rykov">
                             <div class="publications-detail__socials">
-                                <a href="https://www.facebook.com/profile.php?id=100004443691615">
+                                <a href="https://www.facebook.com/rykovproff/?modal=suggested_action&notif_id=1579101163193967&notif_t=page_user_activity&ref=notif">
                                     <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/facebook-social.svg"
                                          alt="facebook-social">
                                 </a>
@@ -297,31 +304,13 @@ if ($hasSpecifiedBanner) {
     </div>
     <div class="publications-detail-docs">
         <div class="publications-detail-social">
-            <h4>поделиться в социальных сетях:</h4>
-            <div class="row">
-                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                    <div class="publications-detail-social-item">
-                        <a href="http://vk.com/share.php?url=https://rykov.pro<?= $arResult['DETAIL_PAGE_URL']; ?>&title=<?= $arResult['NAME']; ?>&image=https://rykov.pro<?= $arResult['PREVIEW_PICTURE']['SRC']; ?>&noparse=true"
-                           target="_blank"><i class="icon-vkontakte"></i></a>
-                    </div>
-                </div>
-                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                    <div class="publications-detail-social-item">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://rykov.pro<?= $arResult['DETAIL_PAGE_URL']; ?>&p=https://rykov.pro<?= $arResult['PREVIEW_PICTURE']['SRC']; ?>"
-                           target="_blank"><i class="icon-facebook"></i></a>
-                    </div>
-                </div>
-                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                </div>
-                <div class="col-3 col-sm-3 col-md-2 col-lg-2">
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                    <div class="publications-detail-social-subscribe">
-                        <a href="https://vk.com/rykovivan" target="_blank">Подписаться на VK</a>
-                        <a href="https://www.facebook.com/rykovpro" target="_blank">Подписаться на FB</a>
-                    </div>
-                </div>
-            </div>
+            <h4>Присоединяйся к нам на Facebook</h4>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                    src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v5.0&appId=501569673828636&autoLogAppEvents=1"></script>
+            <div class="fb-group" data-href="https://www.facebook.com/groups/subsidiarnaya.otvetstvennost"
+                 data-width=""
+                 data-show-social-context="true" data-show-metadata="false"></div>
         </div>
     </div>
 </div>

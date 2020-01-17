@@ -22,7 +22,7 @@ $this->setFrameMode(true);
 					<?$picture = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 525, "height" => 325), BX_RESIZE_IMAGE_EXACT);?>
 					<?$alt = $arItem['PREVIEW_PICTURE']['ALT'];?>
 				<?else:?>
-					<?=$picture = $templateFolder."/img/default.jpg";?>
+					<?$picture = $templateFolder."/img/default.jpg";?>
 					<?$alt = $arItem["NAME"];?>
 				<?endif;?>
 				<img class = "img-fluid" src = "<?=$picture['src'];?>" alt = "<?=$alt;?>">
