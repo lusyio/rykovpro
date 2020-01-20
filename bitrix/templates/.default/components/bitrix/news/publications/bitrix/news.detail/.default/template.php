@@ -302,15 +302,4 @@ if ($hasSpecifiedBanner) {
             </div>
         </div>
     </div>
-    <div class="publications-detail-docs">
-        <div class="publications-detail-social">
-            <h4>Присоединяйся к нам на Facebook</h4>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous"
-                    src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v5.0&appId=501569673828636&autoLogAppEvents=1"></script>
-            <div class="fb-group" data-href="https://www.facebook.com/groups/subsidiarnaya.otvetstvennost"
-                 data-width=""
-                 data-show-social-context="true" data-show-metadata="false"></div>
-        </div>
-    </div>
 </div>

@@ -232,7 +232,7 @@
     display: block;
 }
 
-.ideas-detail-text .notice p {
+.ideas-detail-text .notice p, .ideas-detail-text .notice li {
     font-weight: 300;
     font-size: 0.875rem;
     line-height: 28px;
@@ -252,7 +252,7 @@
     color: #000000;
     padding-left: 57px;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .ideas-detail-text blockquote:before {

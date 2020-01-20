@@ -285,7 +285,7 @@
     display: block;
 }
 
-.publications-detail-text .notice p {
+.publications-detail-text .notice p, .publications-detail-text .notice li {
     font-weight: 300;
     font-size: 0.875rem;
     line-height: 28px;
@@ -305,7 +305,7 @@
     color: #000000;
     padding-left: 57px;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .publications-detail-text .publications-detail-picture h1 {
@@ -491,6 +491,35 @@
     text-align: center;
 }
 
+.publications-detail-text a.btn.fb-me {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    padding: 12px 40px;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #4267B2;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -ms-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+    max-width: 320px;
+    width: 100%;
+}
+
+.publications-detail-text a.btn.fb-me:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #4e69a2;
+}
+
 .publications-detail-quiz__btn:disabled {
     background: #BCBCBC;
     cursor: not-allowed;
@@ -526,6 +555,7 @@
     margin: 0;
     list-style: none;
     padding: 0;
+    padding-left: 15px;
 }
 
 .publications-detail-sidebar > ul > p {
@@ -725,7 +755,7 @@
     width: 55%;
 }
 
-.publications-detail-share{
+.publications-detail-share {
     margin-bottom: 10px;
 }
 
