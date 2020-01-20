@@ -190,12 +190,6 @@
     margin-bottom: 18px;
 }
 
-.ideas-detail-text img {
-    margin-bottom: 12px;
-    max-width: 100%;
-    height: auto;
-}
-
 .ideas-detail-text table {
     border: 1px solid #DCDCDC;
 }
@@ -509,7 +503,7 @@
     width: 100%;
 }
 
-.ideas-detail-random .form-control::placeholder{
+.ideas-detail-random .form-control::placeholder {
     text-align: center;
     font-weight: 300;
     font-size: 0.8125rem;
@@ -549,6 +543,15 @@
     font-size: 0.875rem;
     line-height: 17px;
     color: #000000;
+    margin-bottom: 0;
+}
+
+.ideas-detail-author .ideas-detail__socials img {
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -ms-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
     margin-bottom: 0;
 }
 

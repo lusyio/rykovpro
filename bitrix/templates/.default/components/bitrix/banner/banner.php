@@ -8,10 +8,8 @@ ob_start();
 ?>
     <div class="subscribe-form">
         <img src="/images/lm_default.png" alt=""/>
-        <span
-        >Еженедельный онлайн-журнал, подпишись, чтобы не пропустить полезные
-        материалы</span
-        >
+        <span>Еженедельный онлайн-журнал, подпишись, чтобы не пропустить полезные
+        материалы</span>
         <form
                 method="POST"
                 action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"

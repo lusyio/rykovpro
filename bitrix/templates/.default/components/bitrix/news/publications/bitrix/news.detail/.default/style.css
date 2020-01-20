@@ -244,6 +244,7 @@
 
 .publications-detail-text table {
     border: 1px solid #DCDCDC;
+    margin-bottom: 40px;
 }
 
 .publications-detail-text table td {
@@ -1286,7 +1287,7 @@
     }
 
     .publications-detail-text table td {
-        display: table;
+        /*display: table;*/
     }
 
     .publications-detail-social h4 {
