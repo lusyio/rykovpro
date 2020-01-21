@@ -157,6 +157,9 @@ if ($matchesCount > 0) {
             $listOfContentHtml .= '</ul>';
         }
         $listOfContentHtml .= '<li><a href="#' . $id . '">' . $hTitles[2][$key] . '</a></li>';
+        if(count($hTitles[1]) === $key + 1 ){
+            $listOfContentHtml .= '</ul>';
+        }
     }
     $listOfContentHtml .= '</ul>';
 }
