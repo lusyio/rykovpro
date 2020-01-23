@@ -176,6 +176,10 @@ if ($hasSpecifiedBanner) {
     $banner = $banners['default'];
 }
 //КОНЕЦ БЛОКА ПОЛУЧЕНИЯ БАННЕРА ДЛЯ ВСТАВКИ
+
+// Оборачиваем таблицы div'ом
+$arResult["DETAIL_TEXT"] = preg_replace('~<table~iU', '<div class="tables-responsive"><table', $arResult["DETAIL_TEXT"]);
+$arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arResult["DETAIL_TEXT"]);
 ?>
 
 <div class="publications-detail">
