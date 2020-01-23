@@ -2,7 +2,7 @@
 $tests = [];
 ob_start();
 ?>
-    <div class="publications-detail-quiz">
+    <div class="publications-detail-quiz test1">
         <p class="publications-detail-quiz__title">
             Определите вероятность взыскания дебиторской задолженности с вашего должника
         </p>
@@ -350,7 +350,275 @@ ob_start();
 $tests['test1'] = ob_get_clean();
 ob_start();
 ?>
-    <div>Тест 2</div>
+    <div class="publications-detail-quiz test2">
+        <p class="publications-detail-quiz__title">
+            Грозит ли вам субсидиарная ответственность?
+        </p>
+        <hr class="publications-detail-quiz__hr">
+        <p class="publications-detail-quiz__desc">
+            Пройдите тест из <strong>10 вопросов</strong>, чтобы узнать о своей ситуации. По итогам теста вы узнаете в
+            какой <strong>группе риска</strong>
+            вы находитесь (критическая, высокая, невысокая), и в соответствии с ней получите рекомендации по мерам
+            защиты от субсидиарной ответственности.
+        </p>
+        <hr class="publications-detail-quiz__hr">
+        <div class="publications-detail-quiz__container">
+            <div class="publications-detail-quiz__question-container">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№1</span> Были ли случаи, когда Вы как
+                    руководитель или учредитель от имени компании продавали ее имущество себе или своим родственникам?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers44">
+                        <input type="radio" id="answers44" name="answers" value="10">
+                        <span>Да, были</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers45">
+                        <input type="radio" id="answers45" name="answers" value="5">
+                        <span>Не помню, возможно да</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers46">
+                        <input type="radio" id="answers46" name="answers" value="0">
+                        <span>Нет, в пределах последних трех лет не было</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№2</span> Ваша компания за последние три года
+                    продавала свое имущество: недвижимость, транспортные средства, оборудование? Как вы определяли цену
+                    продажи? Почему решили продать имущество?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers40">
+                        <input type="radio" id="answers40" name="answers" value="10">
+                        <span>Продавали имущество, так как не хватало денег, чтобы рассчитаться по долгам. Продавали по заниженной цене, чтобы быстрее продать</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers41">
+                        <input type="radio" id="answers41" name="answers" value="5">
+                        <span>Продавали старое имущество, чтобы купить новое. Цену продажи определяли как рыночную, ориентировались по ценам на схожее имущество у других продавцов</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers42">
+                        <input type="radio" id="answers42" name="answers" value="0">
+                        <span>Не продавала</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№3</span> В вашей организации практикуется
+                    проверка контрагентов на добросовестность: вы запрашиваете их учредительные документы, проверяете
+                    информацию на сайте ФНС России, Службы судебных приставов, в картотеке дел арбитражных судов?
+                    Встречаетесь ли Вы (или Ваши сотрудники) лично с руководителями (сотрудниками) контрагентов при
+                    заключении договоров или обмен документами происходит по почте?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers37">
+                        <input type="radio" id="answers37" name="answers" value="0">
+                        <span>Да, всегда</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers38">
+                        <input type="radio" id="answers38" name="answers" value="3">
+                        <span>Не всех контрагентов проверяем, но большинство - да</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers39">
+                        <input type="radio" id="answers39" name="answers" value="7">
+                        <span>Проверяем редко</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers390">
+                        <input type="radio" id="answers390" name="answers" value="10">
+                        <span>Никогда не проверяем</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№4</span> Известно введено ли в отношении Вашей
+                    компании конкурсное производство или наблюдение?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers1">
+                        <input type="radio" id="answers1" name="answers" value="10">
+                        <span>Да</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers2">
+                        <input type="radio" id="answers2" name="answers" value="0">
+                        <span>Нет</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№5</span> На данный момент у вашей фирмы есть
+                    просроченная задолженность? Какой период просрочки?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers4">
+                        <input type="radio" id="answers4" name="answers" value="0">
+                        <span>У нас нет просроченной задолженности</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers5">
+                        <input type="radio" id="answers5" name="answers" value="3">
+                        <span>Есть задолженность. Срок не больше 1 месяца</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers6">
+                        <input type="radio" id="answers6" name="answers" value="5">
+                        <span>Есть задолженность сроком до 90 дней</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers7">
+                        <input type="radio" id="answers7" name="answers" value="7">
+                        <span>Есть задолженность сроком от 90 дней до года</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers8">
+                        <input type="radio" id="answers8" name="answers" value="10">
+                        <span>Есть задолженность сроком больше 1 года</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№6</span> Подавали ли за последние три года
+                    контрагенты против Вашей компании иски о взыскании задолженности?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers9">
+                        <input type="radio" id="answers9" name="answers" value="0">
+                        <span>Нет, не подавали</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers10">
+                        <input type="radio" id="answers10" name="answers" value="5">
+                        <span>Подавали несколько раз</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers11">
+                        <input type="radio" id="answers11" name="answers" value="10">
+                        <span>Постоянно подают</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№7</span> Бывают ли в Вашей бухгалтерской и
+                    налоговой отчетности ошибки? Получали ли Вы от налоговых органов сообщения об ошибках?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers13">
+                        <input type="radio" id="answers13" name="answers" value="5">
+                        <span>Нет, за последние три года ошибок серьезных ошибок не было. Сообщений из налоговой не получали</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers14">
+                        <input type="radio" id="answers14" name="answers" value="5">
+                        <span>Иногда бывают ошибки, но мы сразу их исправляем</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers15">
+                        <input type="radio" id="answers15" name="answers" value="10">
+                        <span>В этот вопрос я не вникаю, этим занимается бухгалтер</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№8</span> Были ли случаи утраты документы
+                    бухгалтерского учета
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers17">
+                        <input type="radio" id="answers17" name="answers" value="10">
+                        <span>Да, документы не восстановили до сих пор</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers18">
+                        <input type="radio" id="answers18" name="answers" value="5">
+                        <span>Были, но восстановили</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers19">
+                        <input type="radio" id="answers19" name="answers" value="0">
+                        <span>Нет</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№9</span> Имеются ли у организации или у Вас
+                    как директора штрафы, задолженность, которые были начислены налоговой службой и другими госорганами,
+                    а также судом за нарушение налогового, административного или уголовного законодательства?
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers22">
+                        <input type="radio" id="answers22" name="answers" value="0">
+                        <span>Нет</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers23">
+                        <input type="radio" id="answers23" name="answers" value="5">
+                        <span>Да, есть небольшие штрафы и начисления, до 1 млн. руб.</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers24">
+                        <input type="radio" id="answers24" name="answers" value="10">
+                        <span>Да, есть значительные начисления и штрафы, больше 1 млн. руб.</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none">
+                <p id="quizQuestion" class="publications-detail-quiz__question"><span
+                            class="publications-detail-quiz__number">№10</span> Вносили ли Вы в Единый федеральный
+                    реестр сведений о фактах деятельности юрлиц (ЕФРСФДЮЛ) сведения о том, что: - в отношении Вашей
+                    компании введена процедура наблюдения? <br>
+                    - была смена адреса <br>
+                    - имущество в залоге <br>
+                    - смена учредителя директора <br>
+                    И т.д.
+                </p>
+                <div class="publications-detail-quiz__answer-container">
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers29">
+                        <input type="radio" id="answers29" name="answers" value="0">
+                        <span>Сведения вносим всегда, либо оснований не было</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers30">
+                        <input type="radio" id="answers30" name="answers" value="5">
+                        <span>Не помню / не знаю, кто то должен вносить, но не знаю вносил или нет</span>
+                    </label>
+                    <label class="publications-detail-quiz__answer pure-material-radio" for="answers31">
+                        <input type="radio" id="answers31" name="answers" value="10">
+                        <span>Не вносили</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="publications-detail-quiz__question-container d-none end">
+                <p class="publications-detail-quiz__question end">
+
+                </p>
+                <form method="POST"
+                      action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                      name="subscribtion_form">
+                    <div class="input-group ">
+                        <div class="subscribe-form-item subscribe-form-item--input-email">
+                            <input
+                                    class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                    placeholder="Введите ваш email" type="text" name="email" value="">
+                        </div>
+                        <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
+                            <input
+                                    class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                    type="submit" value="Подписаться">
+                        </div>
+                        <input type="hidden" name="charset" value="UTF-8">
+                        <input type="hidden" name="default_list_id" value="19581681">
+                        <input type="hidden" name="overwrite" value="2">
+                        <input type="hidden" name="is_v5" value="1">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button disabled id="nextQuestion" class="publications-detail-quiz__btn">Следующий вопрос</button>
+    </div>
 <?
 $tests['test2'] = ob_get_clean();
 ob_start();

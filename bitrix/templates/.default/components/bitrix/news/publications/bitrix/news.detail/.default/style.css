@@ -254,13 +254,28 @@
     font-size: 13px;
     line-height: 18px;
     color: #000000;
+    margin-bottom: 0;
 }
 
-.publications-detail-text table tbody > tr:first-of-type td {
+.publications-detail-text table td p{
+    padding: 0;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.tables-responsive{
+    overflow: auto;
+}
+
+.publications-detail-text table tbody > tr:first-of-type td, .publications-detail-text table tbody > tr:first-of-type td p {
     font-weight: normal;
     font-size: 13px;
     line-height: 18px;
     color: #000000;
+    margin-bottom: 0;
 }
 
 .publications-detail-text .notice {
