@@ -353,5 +353,10 @@ ob_start();
     <div>Тест 2</div>
 <?
 $tests['test2'] = ob_get_clean();
+ob_start();
+?>
+    <button type="button" class="btn btn-primary show-modal-btn" data-toggle="modal" data-target=".adviceModal">ПОКАЗАТЬ МОДАЛКУ)</button>
+<?
+$tests['test3'] = ob_get_clean();
 
 return $tests;
