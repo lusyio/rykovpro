@@ -1,0 +1,105 @@
+.advice-modal .modal-content{
+    border-radius: 0;
+    background: #2C2C2C;
+    padding: 25px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.advice-modal .modal-content .modal-body{
+    padding: 35px 50px;
+    border-radius: 0;
+    border: 3px solid #C9C9C9;
+    position: relative;
+}
+
+.advice-modal .advice-modal__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+
+.advice-modal .advice-modal__list{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.advice-modal .advice-modal__list:last-of-type{
+    margin-bottom: 15px;
+}
+
+.advice-modal .advice-modal__list img{
+    margin-right: 5px;
+}
+
+.advice-modal .advice-modal__more{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.advice-modal .advice-modal__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.advice-modal .advice-modal__close{
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.advice-modal .advice-modal__close:active, .advice-modal .advice-modal__close:focus{
+    background: transparent;
+}
+
+.advice-modal .input-group{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.advice-modal .input-group .subscribe-form-item--input-email input {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 8px 25px;
+    height: 35px;
+    border-radius: 35px !important;
+    border: none;
+}
+
+.advice-modal .input-group .subscribe-form-item--input-email {
+    width: 100%;
+}
+
+.advice-modal .input-group .input-group-append{
+    position: absolute;
+    right: 0;
+}
+
+.advice-modal .input-group .input-group-append input{
+    font-size: 14px;
+    line-height: 19px;
+    padding: 8px 22px;
+    height: 35px;
+    color: #fff;
+    background: #D2232A;
+    border-radius: 35px !important;
+}
+
+.advice-modal .advice-modal__img-rykov{
+    position: absolute;
+    left: -79px;
+    bottom: -65px;
+}
+
+.advice-modal.show ~.wrapper {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}

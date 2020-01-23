@@ -32,9 +32,55 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->AddHeadScript(ASSETS."/js/global.js");?>
         <link rel = "shortcut icon" type = "image/x-icon" href = "/favicon.ico">
         <link rel = "icon" type = "image/x-icon" href = "/favicon.png">
-	</head>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
 	<body>
-		<?if($USER->IsAdmin()):?>
+    <div class="modal advice-modal fade bd-example-modal-lg" id="adviceModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="advice-modal__close" data-dismiss="modal"><img src="/bitrix/templates/main/images/close.svg" alt=""></button>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="advice-modal__img-rykov" src="/bitrix/templates/main/images/rykov-photo.png" alt="Рыков">
+                            </div>
+                            <div class="col">
+                                <p class="advice-modal__title">Юридические советы по работе с контрагентами</p>
+                                <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Как предотвратить появление дебиторки</p>
+                                <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Как правильно требовать возврат денежных средств</p>
+                                <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Способы ведения жестких переговоров</p>
+                                <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Образцы документов для взыскания</p>
+                                <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Кейсы и примеры из практики</p>
+                                <p class="advice-modal__more">это и многое другое в еженедельной авторской рассылке от Ивана Рыкова</p>
+                                <form method="POST"
+                                      action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                                      name="subscribtion_form">
+                                    <div class="input-group">
+                                        <div class="subscribe-form-item subscribe-form-item--input-email">
+                                            <input
+                                                    class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
+                                                    placeholder="Введите ваш email" type="text" name="email" value="">
+                                        </div>
+                                        <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
+                                            <input
+                                                    class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
+                                                    type="submit" value="Подписаться">
+                                        </div>
+                                        <input type="hidden" name="charset" value="UTF-8">
+                                        <input type="hidden" name="default_list_id" value="19597957">
+                                        <input type="hidden" name="overwrite" value="2">
+                                        <input type="hidden" name="is_v5" value="1">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?if($USER->IsAdmin()):?>
 			<div id = "panel">
 				<?$APPLICATION->ShowPanel();?>
 			</div>
@@ -142,3 +188,44 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				<div class = "container">
 					<div class = "row">
 						<div class = "col-12">
+                            <script>
+                                function setCookie(name,value,days) {
+                                    var expires = "";
+                                    if (days) {
+                                        var date = new Date();
+                                        date.setTime(date.getTime() + (days*24*60*60*1000));
+                                        expires = "; expires=" + date.toUTCString();
+                                    }
+                                    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                                }
+                                function getCookie(name) {
+                                    var nameEQ = name + "=";
+                                    var ca = document.cookie.split(';');
+                                    for(var i=0;i < ca.length;i++) {
+                                        var c = ca[i];
+                                        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                                        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                                    }
+                                    return null;
+                                }
+                                $(document).ready(function () {
+                                    var cookie = getCookie('modal');
+                                    if (cookie === 'hide'){
+                                        $('#adviceModal').removeAttr("id");
+                                    } else {
+                                        $('#adviceModal').modal({
+                                            backdrop: 'static',
+                                            keyboard: false,
+                                            show: false
+                                        })
+                                        $('.show-modal-btn').on('click', function () {
+                                            $('#adviceModal').modal('show')
+                                        })
+                                        $('#adviceModal').on('hide.bs.modal', function () {
+                                            $(this).removeAttr("id");
+                                            setCookie('modal', 'hide', 10)
+                                        })
+                                    }
+
+                                })
+                            </script>
