@@ -42,10 +42,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                     <button class="advice-modal__close" data-dismiss="modal"><img src="/bitrix/templates/main/images/close.svg" alt=""></button>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-4 d-lg-flex d-none">
                                 <img class="advice-modal__img-rykov" src="/bitrix/templates/main/images/rykov-photo.png" alt="Рыков">
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-lg-8">
                                 <p class="advice-modal__title">Юридические советы по работе с контрагентами</p>
                                 <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Как предотвратить появление дебиторки</p>
                                 <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Как правильно требовать возврат денежных средств</p>
@@ -72,6 +72,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                         <input type="hidden" name="overwrite" value="2">
                                         <input type="hidden" name="is_v5" value="1">
                                     </div>
+                                    <a class="d-block d-lg-none advice-modal__close-link" data-dismiss="modal">Нет, спасибо, у меня все под контролем!</a>
                                 </form>
                             </div>
                         </div>
@@ -200,26 +201,26 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 							<div class = "col-12">
                                 <script>
                                     function setCookie(name,value,days) {
-                                        var expires = "";
+                                        let expires = "";
                                         if (days) {
-                                            var date = new Date();
+                                            let date = new Date();
                                             date.setTime(date.getTime() + (days*24*60*60*1000));
                                             expires = "; expires=" + date.toUTCString();
                                         }
                                         document.cookie = name + "=" + (value || "")  + expires + "; path=/";
                                     }
                                     function getCookie(name) {
-                                        var nameEQ = name + "=";
-                                        var ca = document.cookie.split(';');
-                                        for(var i=0;i < ca.length;i++) {
-                                            var c = ca[i];
+                                        let nameEQ = name + "=";
+                                        let ca = document.cookie.split(';');
+                                        for(let i=0;i < ca.length;i++) {
+                                            let c = ca[i];
                                             while (c.charAt(0)==' ') c = c.substring(1,c.length);
                                             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
                                         }
                                         return null;
                                     }
                                     $(document).ready(function () {
-                                        var cookie = getCookie('modal');
+                                        let cookie = getCookie('modal');
                                         if (cookie === 'hide'){
                                             $('#adviceModal').removeAttr("id");
                                         } else {

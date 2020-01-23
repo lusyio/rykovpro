@@ -13,6 +13,10 @@
     position: relative;
 }
 
+.advice-modal .subscribe-form-item--btn-submit {
+    margin-bottom: 0;
+}
+
 .advice-modal .advice-modal__title{
     font-weight: 600;
     font-size: 24px;
@@ -42,15 +46,12 @@
 }
 
 .advice-modal .advice-modal__close{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.advice-modal .advice-modal__close{
     background: transparent;
     border: none;
     padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .advice-modal .advice-modal__close:active, .advice-modal .advice-modal__close:focus{
@@ -69,6 +70,18 @@
     height: 35px;
     border-radius: 35px !important;
     border: none;
+}
+
+.advice-modal .modal-content .advice-modal__close-link{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+    text-align: center;
+}
+
+.advice-modal .advice-modal__close-link:hover{
+    color: #828282;
 }
 
 .advice-modal .input-group .subscribe-form-item--input-email {
@@ -102,4 +115,74 @@
     -o-filter: blur(15px);
     -ms-filter: blur(15px);
     filter: blur(15px);
+}
+
+
+@media screen and (max-width: 768px){
+    .advice-modal .modal-content{
+        padding: 10px;
+    }
+
+    .advice-modal .modal-content .modal-body{
+        padding: 20px 10px;
+        border: 2px solid #C9C9C9;
+    }
+
+    .advice-modal .advice-modal__title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .advice-modal .advice-modal__list{
+        font-weight: 300;
+        line-height: 17px;
+        margin-bottom: 10px;
+    }
+
+    .advice-modal .advice-modal__list:last-of-type{
+        margin-bottom: 20px;
+    }
+
+    .advice-modal .advice-modal__more{
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .advice-modal .advice-modal__close img{
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 26px;
+    }
+
+    .advice-modal .advice-modal__close{
+        background: #2c2c2c;
+        border: none;
+        padding: 10px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+
+    .advice-modal .input-group .input-group-append input{
+        width: 100%;
+    }
+
+    .advice-modal .input-group .input-group-append{
+        position: relative;
+        width: 100%;
+    }
+
+    .advice-modal .subscribe-form-item--btn-submit {
+        margin-bottom: 0;
+    }
+
+    .advice-modal .input-group{
+        margin-bottom: 15px;
+    }
+
 }
