@@ -322,6 +322,11 @@ ob_start();
                 <p class="publications-detail-quiz__question end">
 
                 </p>
+                <p class="publications-detail-quiz__question">
+                    Оставьте свой email, чтобы <strong>получить видео "32 стратегии взыскания задолженности"</strong> и подробный план,
+                    как вести себя с должником, чтобы вернуть свои деньги.
+                </p>
+                <img class="publications-detail-quiz__youtube" src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/youtube-img.webp" alt="">
                 <form method="POST"
                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                       name="subscribtion_form">
@@ -610,7 +615,7 @@ ob_start();
                                     type="submit" value="Подписаться">
                         </div>
                         <input type="hidden" name="charset" value="UTF-8">
-                        <input type="hidden" name="default_list_id" value="19581681">
+                        <input type="hidden" name="default_list_id" value="19751373">
                         <input type="hidden" name="overwrite" value="2">
                         <input type="hidden" name="is_v5" value="1">
                     </div>
@@ -623,7 +628,9 @@ ob_start();
 $tests['test2'] = ob_get_clean();
 ob_start();
 ?>
-    <button type="button" class="btn btn-primary show-modal-btn" data-toggle="modal" data-target=".adviceModal">ПОКАЗАТЬ МОДАЛКУ)</button>
+    <button type="button" class="btn btn-primary show-modal-btn" data-toggle="modal" data-target=".adviceModal">ПОКАЗАТЬ
+        МОДАЛКУ)
+    </button>
 <?
 $tests['test3'] = ob_get_clean();
 
