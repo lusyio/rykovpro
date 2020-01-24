@@ -224,14 +224,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                         if (cookie === 'hide'){
                                             $('#adviceModal').removeAttr("id");
                                         } else {
-                                            $('#adviceModal').modal({
-                                                backdrop: 'static',
-                                                keyboard: false,
-                                                show: false
-                                            })
-                                            $('.show-modal-btn').on('click', function () {
-                                                $('#adviceModal').modal('show')
-                                            })
+                                            setTimeout(function () {
+                                                $('#adviceModal').modal({
+                                                    backdrop: 'static',
+                                                    keyboard: false,
+                                                    show: true
+                                                })
+                                            }, 15000)
                                             $('#adviceModal').on('hide.bs.modal', function () {
                                                 $(this).removeAttr("id");
                                                 setCookie('modal', 'hide', 10)
