@@ -41,6 +41,7 @@ function getRecommended($publicationId, $imageAlt = '')
                     <?= $recommendedResult["PREVIEW_TEXT"]; ?>
                 </p>
                 <a class="btn btn-primary btn-radius"
+                   onclick="ym(66075049, 'reachGoal', 'morearticle'); return true;"
                    href="<?= $recommendedResult["DETAIL_PAGE_URL"]; ?>">Продолжить чтение</a>
             </div>
         </div>
@@ -67,6 +68,7 @@ function getSubscribeForm()
                     <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
                         предпринимателей.</p>
                     <form method="POST"
+                          onsubmit="ym(65833099, 'reachGoal', 'subscribe2'); return true;"
                           action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                           name="subscribtion_form">
                         <div class="input-group">

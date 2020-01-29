@@ -328,6 +328,7 @@ ob_start();
                 </p>
                 <img class="publications-detail-quiz__youtube" src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/youtube-img.webp" alt="">
                 <form method="POST"
+                      onsubmit="ym(65833081, 'reachGoal', 'subscribe1'); return true;"
                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                       name="subscribtion_form">
                     <div class="input-group ">
@@ -601,6 +602,7 @@ ob_start();
 
                 </p>
                 <form method="POST"
+                      onsubmit="ym(65833099, 'reachGoal', 'subscribe2'); return true;"
                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                       name="subscribtion_form">
                     <div class="input-group ">
