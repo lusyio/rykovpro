@@ -11,6 +11,7 @@ ob_start();
         <span>Еженедельный онлайн-журнал, подпишись, чтобы не пропустить полезные
         материалы</span>
         <form
+                onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
                 method="POST"
                 action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                 name="subscribtion_form"

@@ -70,6 +70,7 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                             <p class="ideas-detail-random__content">Авторские советы от Ивана Рыкова раз в месяц в нашей
                                 рассылке для предпринимателей.</p>
                             <form method="POST"
+                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe2'); return true;"
                                   action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                   name="subscribtion_form">
                                 <div class="input-group">
@@ -96,6 +97,7 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                             <p class="ideas-detail-random__content">Как не допустить появления дебиторской задолженности
                                 - еженедельные авторские советы</p>
                             <form method="POST"
+                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
                                   action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                   name="subscribtion_form">
                                 <div class="input-group">
@@ -182,6 +184,7 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                             <p class="ideas-detail-random__content">Авторские советы от Ивана Рыкова раз в месяц в нашей
                                 рассылке для предпринимателей.</p>
                             <form method="POST"
+                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe2'); return true;"
                                   action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                   name="subscribtion_form">
                                 <div class="input-group">
@@ -208,6 +211,7 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                             <p class="ideas-detail-random__content">Как не допустить появления дебиторской задолженности
                                 - еженедельные авторские советы</p>
                             <form method="POST"
+                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
                                   action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                   name="subscribtion_form">
                                 <div class="input-group">

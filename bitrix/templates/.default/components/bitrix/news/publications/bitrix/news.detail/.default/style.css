@@ -1288,6 +1288,14 @@
         max-width: 315px;
     }
 
+    .publications-detail-quiz .publications-detail-quiz__title{
+        font-size: 1.4rem;
+    }
+
+    .btn.btn-outline.adviceBtn{
+        width: 100%;
+    }
+
     .publications-detail-advice-body {
         padding: 25px;
     }
