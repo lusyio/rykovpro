@@ -227,8 +227,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                         } else {
                                             setTimeout(function () {
                                                 $('#adviceModal').modal({
-                                                    backdrop: 'static',
-                                                    keyboard: false,
+                                                    backdrop: true,
+                                                    keyboard: true,
                                                     show: true
                                                 })
                                             }, 15000)
