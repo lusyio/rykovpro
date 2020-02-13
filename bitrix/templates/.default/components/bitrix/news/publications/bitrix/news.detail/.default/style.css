@@ -69,7 +69,7 @@
     width: 100%;
 }
 
-.publications-detail-picture h1 {
+.publications-detail-picture h1, .publications-detail-picture .h1 {
     align-items: center;
     color: #fff;
     display: flex;
@@ -87,7 +87,7 @@
     max-width: 680px;
 }
 
-.publications-detail-picture h1::before {
+.publications-detail-picture h1::before, .publications-detail-picture .h1::before {
     color: #d2232a;
     content: '';
     display: block;
@@ -323,7 +323,7 @@
     margin-bottom: 30px;
 }
 
-.publications-detail-text .publications-detail-picture h1 {
+.publications-detail-text .publications-detail-picture h1, .publications-detail-text .publications-detail-picture .h1 {
     font-weight: 900;
     font-size: 1.5rem;
     line-height: 32px;
@@ -1319,7 +1319,7 @@
         padding: 36px 20px 36px 50px;
     }
 
-    .publications-detail-picture h1 {
+    .publications-detail-picture h1, .publications-detail-picture .h1 {
         font-size: 1rem;
         line-height: 21px;
         width: unset;

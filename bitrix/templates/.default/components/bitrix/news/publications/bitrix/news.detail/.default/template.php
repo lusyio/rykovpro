@@ -36,7 +36,7 @@ function getRecommended($publicationId, $imageAlt = '')
             <img src="<?= $recommendedPicture; ?>" alt="<?= $imageAlt ?>" title="<?= $imageAlt ?>">
             <div class="publications-detail-picture-body">
                 <p>Также рекомендую прочитать эту статью</p>
-                <h1><?= $recommendedResult["NAME"]; ?></h1>
+                <p class="h1"><?= $recommendedResult["NAME"]; ?></p>
                 <p>
                     <?= $recommendedResult["PREVIEW_TEXT"]; ?>
                 </p>
