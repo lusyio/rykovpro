@@ -6,9 +6,15 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <!DOCTYPE html>
 <html lang = "ru">
 	<head>
-		<?$APPLICATION->ShowHead();?>
-		<title><?$APPLICATION->ShowTitle();?></title>
-		<meta charset = "utf-8">
+        <?echo '<meta http-equiv="Content-Type" content="text/html; charset='.LANG_CHARSET.'"'.($bXhtmlStyle? ' /':'').'>'."\n";
+        $APPLICATION->ShowMeta("robots", false, $bXhtmlStyle);
+        echo $APPLICATION->GetMeta('description');
+        $APPLICATION->ShowMeta("description", false, $bXhtmlStyle);
+        $APPLICATION->ShowLink("canonical", null, $bXhtmlStyle);
+        $APPLICATION->ShowCSS(true, $bXhtmlStyle);
+        $APPLICATION->ShowHeadStrings();
+        $APPLICATION->ShowHeadScripts();?>
+		<title><?$APPLICATION->ShowTitle();?> - Иван Рыков</title>
 		<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name = "google-site-verification" content = "YXZf_pK1j6s1dwV8JjyJHnqgIaVj7_GhJ8tdW3DtxE0"/>
 		<meta name="yandex-verification" content="dd334cbc800191d8" />
@@ -54,7 +60,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                 <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Кейсы и примеры из практики</p>
                                 <p class="advice-modal__more">это и многое другое в еженедельной авторской рассылке от Ивана Рыкова</p>
                                 <form method="POST"
-                                      onsubmit="ym(65833081, 'reachGoal', 'subscribe1'); return true;"
+                                      onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
                                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                       name="subscribtion_form">
                                     <div class="input-group">
@@ -217,8 +223,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                     } else {
                                         setTimeout(function () {
                                             $('#adviceModal').modal({
-                                                backdrop: 'static',
-                                                keyboard: false,
+                                                backdrop: true,
+                                                keyboard: true,
                                                 show: true
                                             })
                                         }, 15000)
