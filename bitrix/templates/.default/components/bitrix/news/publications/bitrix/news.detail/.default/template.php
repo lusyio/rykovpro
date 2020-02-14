@@ -56,18 +56,13 @@ function getSubscribeForm()
     ?>
     <div class="publications-detail-advice">
         <div class="row">
-            <div class="col-md-4 col-xl-3 col-12 text-md-left text-center">
-                <img class="advice-img"
-                     src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov.jpg"
-                     alt="rykov">
-            </div>
             <div class="col">
                 <div class="publications-detail-advice-body">
                     <p class="h3">Как не попасть под субсидиарку?</p>
-                    <p>Авторские советы от Ивана Рыкова раз в месяц в нашей рассылке для
-                        предпринимателей.</p>
+                    <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность - еженедельная
+                        авторская рассылка от Ивана Рыкова</p>
                     <form method="POST"
-                          onsubmit="ym(21107527, 'reachGoal', 'subscribe2'); return true;"
+                          onsubmit="ym(67390669, 'reachGoal', 'emailArticleSubsid'); return true;"
                           action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                           name="subscribtion_form">
                         <div class="input-group">
@@ -158,7 +153,7 @@ if ($matchesCount > 0) {
             $listOfContentHtml .= '</ul>';
         }
         $listOfContentHtml .= '<li><a href="#' . $id . '">' . $hTitles[2][$key] . '</a></li>';
-        if(count($hTitles[1]) === $key + 1 ){
+        if (count($hTitles[1]) === $key + 1) {
             $listOfContentHtml .= '</ul>';
         }
     }
@@ -206,8 +201,8 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
     </div>
     <div class="row">
         <div class="col-lg-1 d-none order-2 d-lg-flex"></div>
-        <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-flex">
-            <div class="publications-detail-sidebar">
+        <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-block">
+            <div class="publications-detail-sidebar sticky-menu">
                 <?= $listOfContentHtml ?>
                 <?= $banner ?>
                 <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["VALUE"] as $key => $value): ?>

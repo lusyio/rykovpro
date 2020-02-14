@@ -68,7 +68,7 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
-<p><a class = "btn btn-primary btn-radius" href = "<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"]?>"><?=GetMessage("T_NEWS_DETAIL_BACK")?></a></p>
+<!--<p><a class = "btn btn-primary btn-radius" href = "--><?//=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"]?><!--">--><?//=GetMessage("T_NEWS_DETAIL_BACK")?><!--</a></p>-->
 <?if($arParams["USE_RATING"]=="Y" && $ElementID):?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:iblock.vote",

@@ -11,6 +11,32 @@ $(function () {
         }
     });
 
+    $(window).scroll(function () {
+        let headers = $('h2');
+        headers.each(function (i, el) {
+            let top = $(el).offset().top - 25;
+            let next = $(el).nextAll('h2');
+            if (next.length !== 0) {
+                next = next.offset().top
+            } else {
+                next = document.documentElement.scrollHeight
+            }
+            let scroll = $(window).scrollTop();
+            let id = $(el).attr('id');
+            if (scroll > top && scroll < next) {
+                $('.publications-detail-sidebar a.active').removeClass('active');
+                $('a[href="#' + id + '"]').addClass('active');
+            }
+        })
+        let stopEl = $('.publications-detail-text').height() - $('.page-header-wrap').height() - $('.publications-detail-picture').height() - $('.publications-detail-tags').height();
+        let scroll = $(window).scrollTop();
+        if (scroll >= stopEl) {
+            $('.sticky-menu').addClass('stop').css('top', (stopEl - document.documentElement.clientHeight - 25))
+        } else {
+            $('.sticky-menu').removeClass('stop').css('top', 0)
+        }
+    });
+
     var $page = $('html, body');
     $('.publications-detail-sidebar a[href*="#"]').click(function () {
         $page.animate({
@@ -20,6 +46,12 @@ $(function () {
     });
 
     $(document).ready(function () {
+
+        $('#test1').on('click',() => {
+            $('.publications-detail-quiz__body').removeClass('d-none');
+            $('.publications-detail-quiz__start').addClass('d-none')
+        })
+
         var totalScore = 0;
         $('.publications-detail-quiz__answer input').on('change', function () {
             $('#nextQuestion').removeAttr('disabled')
@@ -36,6 +68,7 @@ $(function () {
             $('.publications-detail-quiz__question-container:visible').addClass('d-none');
             next.removeClass('d-none')
             if ($('.publications-detail-quiz__question-container.end').is(':visible')) {
+                $('.publications-detail-quiz__hr').removeClass('d-none')
                 let text;
                 let title;
                 let defId;

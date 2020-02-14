@@ -15,6 +15,81 @@ $this->setFrameMode(true);
 // Оборачиваем таблицы div'ом
 $arResult["DETAIL_TEXT"] = preg_replace('~<table~iU', '<div class="tables-responsive"><table', $arResult["DETAIL_TEXT"]);
 $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arResult["DETAIL_TEXT"]);
+
+
+$widgetAdvice = '    <div class="sidebar-advice">
+        <div class="sidebar-advice__body">
+            <div class="rykov-sidebar"></div>
+            <p class="h3">Юридические советы по работе с контрагентами</p>
+            <p>
+                Как работать с дебиторкой, вести переговоры, образцы документов, кейсы из практки и многое другое в
+                еженедельной авторской рассылке от Ивана Рыкова
+            </p>
+            <form
+                    onsubmit="ym(67390351, \'reachGoal\', \'emailSidebarDebt\'); return true;"
+                    method="POST"
+                    action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                    name="subscribtion_form"
+            >
+                <div class="subscribe-form-item subscribe-form-item--input-email">
+                    <input
+                            class="subscribe-form-item__control subscribe-form-item__control--input-email"
+                            type="text"
+                            name="email"
+                            value=""
+                            placeholder="Введите ваш email"
+                    />
+                </div>
+                <div class="subscribe-form-item subscribe-form-item--btn-submit">
+                    <input
+                            class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
+                            type="submit"
+                            value="Подписаться"
+                    />
+                </div>
+                <input type="hidden" name="charset" value="UTF-8"/>
+                <input type="hidden" name="default_list_id" value="19597957"/>
+                <input type="hidden" name="overwrite" value="2"/>
+                <input type="hidden" name="is_v5" value="1"/>
+            </form>
+        </div>
+    </div>';
+
+$widgetSubcide = ' <div class="subscribe-form">
+                            <div class="subscribe-form-body">
+                                <p class="h3"> Как не попасть под субсидиарку</p>
+                                <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность.
+                                    Еженедельная авторская
+                                    рассылка от Ивана Рыкова</p>
+                                <form
+                                        onsubmit="ym(67390351, \'reachGoal\', \'emailSidebarSubsid\'); return true;"
+                                        method="POST"
+                                        action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                                        name="subscribtion_form"
+                                >
+                                    <div class="subscribe-form-item subscribe-form-item--input-email">
+                                        <input
+                                                class="subscribe-form-item__control subscribe-form-item__control--input-email"
+                                                type="text"
+                                                name="email"
+                                                value=""
+                                                placeholder="Введите ваш email"
+                                        />
+                                    </div>
+                                    <div class="subscribe-form-item subscribe-form-item--btn-submit">
+                                        <input
+                                                class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
+                                                type="submit"
+                                                value="Подписаться"
+                                        />
+                                    </div>
+                                    <input type="hidden" name="charset" value="UTF-8"/>
+                                    <input type="hidden" name="default_list_id" value="19597957"/>
+                                    <input type="hidden" name="overwrite" value="2"/>
+                                    <input type="hidden" name="is_v5" value="1"/>
+                                </form>
+                            </div>
+                        </div>'
 ?>
 
 
@@ -64,61 +139,12 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                     </div>
                     <?php
                     $rand = rand(1, 2);
-                    if ($rand === 1): ?>
-                        <div class="ideas-detail-random mb-4">
-                            <p class="ideas-detail-random__title">Как не попасть под субсидиарку?</p>
-                            <p class="ideas-detail-random__content">Авторские советы от Ивана Рыкова раз в месяц в нашей
-                                рассылке для предпринимателей.</p>
-                            <form method="POST"
-                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe2'); return true;"
-                                  action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                  name="subscribtion_form">
-                                <div class="input-group">
-                                    <div class="subscribe-form-item subscribe-form-item--input-email">
-                                        <input
-                                                class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                                placeholder="Введите ваш email" type="text" name="email" value="">
-                                    </div>
-                                    <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
-                                        <input
-                                                class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                                type="submit" value="Подписаться">
-                                    </div>
-                                    <input type="hidden" name="charset" value="UTF-8">
-                                    <input type="hidden" name="default_list_id" value="19751373">
-                                    <input type="hidden" name="overwrite" value="2">
-                                    <input type="hidden" name="is_v5" value="1">
-                                </div>
-                            </form>
-                        </div>
-                    <?php else: ?>
-                        <div class="ideas-detail-random mb-4">
-                            <p class="ideas-detail-random__title">Советы по работе с контрагентами</p>
-                            <p class="ideas-detail-random__content">Как не допустить появления дебиторской задолженности
-                                - еженедельные авторские советы</p>
-                            <form method="POST"
-                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
-                                  action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                  name="subscribtion_form">
-                                <div class="input-group">
-                                    <div class="subscribe-form-item subscribe-form-item--input-email">
-                                        <input
-                                                class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                                placeholder="Введите ваш email" type="text" name="email" value="">
-                                    </div>
-                                    <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
-                                        <input
-                                                class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                                type="submit" value="Подписаться">
-                                    </div>
-                                    <input type="hidden" name="charset" value="UTF-8">
-                                    <input type="hidden" name="default_list_id" value="19597957">
-                                    <input type="hidden" name="overwrite" value="2">
-                                    <input type="hidden" name="is_v5" value="1">
-                                </div>
-                            </form>
-                        </div>
-                    <?php endif; ?>
+                    if ($rand === 1) {
+                        echo $widgetSubcide;
+                    } else {
+                        echo $widgetAdvice;
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">
@@ -178,61 +204,12 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                 <div class="ideas-detail-sidebar">
                     <?php
                     $rand = rand(1, 2);
-                    if ($rand === 1): ?>
-                        <div class="ideas-detail-random mb-4">
-                            <p class="ideas-detail-random__title">Как не попасть под субсидиарку?</p>
-                            <p class="ideas-detail-random__content">Авторские советы от Ивана Рыкова раз в месяц в нашей
-                                рассылке для предпринимателей.</p>
-                            <form method="POST"
-                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe2'); return true;"
-                                  action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                  name="subscribtion_form">
-                                <div class="input-group">
-                                    <div class="subscribe-form-item subscribe-form-item--input-email">
-                                        <input
-                                                class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                                placeholder="Введите ваш email" type="text" name="email" value="">
-                                    </div>
-                                    <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
-                                        <input
-                                                class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                                type="submit" value="Подписаться">
-                                    </div>
-                                    <input type="hidden" name="charset" value="UTF-8">
-                                    <input type="hidden" name="default_list_id" value="19751373">
-                                    <input type="hidden" name="overwrite" value="2">
-                                    <input type="hidden" name="is_v5" value="1">
-                                </div>
-                            </form>
-                        </div>
-                    <?php else: ?>
-                        <div class="ideas-detail-random mb-4">
-                            <p class="ideas-detail-random__title">Советы по работе с контрагентами</p>
-                            <p class="ideas-detail-random__content">Как не допустить появления дебиторской задолженности
-                                - еженедельные авторские советы</p>
-                            <form method="POST"
-                                  onsubmit="ym(21107527, 'reachGoal', 'subscribe1'); return true;"
-                                  action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                  name="subscribtion_form">
-                                <div class="input-group">
-                                    <div class="subscribe-form-item subscribe-form-item--input-email">
-                                        <input
-                                                class="subscribe-form-item__control subscribe-form-item__control--input-email form-control advice-input"
-                                                placeholder="Введите ваш email" type="text" name="email" value="">
-                                    </div>
-                                    <div class="subscribe-form-item subscribe-form-item--btn-submit input-group-append">
-                                        <input
-                                                class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit btn btn-outline adviceBtn"
-                                                type="submit" value="Подписаться">
-                                    </div>
-                                    <input type="hidden" name="charset" value="UTF-8">
-                                    <input type="hidden" name="default_list_id" value="19597957">
-                                    <input type="hidden" name="overwrite" value="2">
-                                    <input type="hidden" name="is_v5" value="1">
-                                </div>
-                            </form>
-                        </div>
-                    <?php endif; ?>
+                    if ($rand === 1) {
+                        echo $widgetSubcide;
+                    } else {
+                        echo $widgetAdvice;
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">

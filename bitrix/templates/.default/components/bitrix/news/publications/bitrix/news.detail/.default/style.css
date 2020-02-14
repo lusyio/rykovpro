@@ -87,6 +87,31 @@
     max-width: 680px;
 }
 
+.sticky-menu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.sticky-menu.stop {
+    position: absolute;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+.publications-detail-sidebar a.active {
+    background: #FFF7AD;
+}
+
+.publications-detail-sidebar a {
+    border-radius: 50px;
+    padding: 4px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    display: block;
+}
+
 .publications-detail-picture h1::before, .publications-detail-picture .h1::before {
     color: #d2232a;
     content: '';
@@ -257,7 +282,7 @@
     margin-bottom: 0;
 }
 
-.publications-detail-text table td p{
+.publications-detail-text table td p {
     padding: 0;
     font-weight: 300;
     font-size: 13px;
@@ -266,7 +291,7 @@
     margin-bottom: 0;
 }
 
-.tables-responsive{
+.tables-responsive {
     overflow: auto;
 }
 
@@ -422,12 +447,76 @@
 }
 
 .publications-detail-quiz {
-    background: #FAFAFA;
-    padding: 40px 65px 45px 50px;
     margin-bottom: 40px;
 }
 
-.publications-detail-quiz__question-container .publications-detail-quiz__youtube{
+.publications-detail-quiz__body {
+    background: #FAFAFA;
+    padding: 40px 65px 45px 50px;
+}
+
+.publications-detail-quiz__start {
+    background: #1E1E1E;
+    padding: 10px 25px 40px 0;
+}
+
+.publications-detail-quiz__start img {
+    margin-left: auto;
+    display: block;
+    margin-bottom: 0;
+
+    position: absolute;
+    bottom: -25px;
+    width: 73%;
+    right: 0;
+}
+
+.publications-detail-quiz__start img.copper {
+    bottom: -40px;
+    width: 160%;
+    right: -40px;
+    max-width: 160%;
+}
+
+
+.publications-detail-quiz__start .h3 {
+    font-weight: 600;
+    font-size: 1.875rem;
+    line-height: 110%;
+    color: #FFFFFF;
+    padding: 30px 20px 50px 50px;
+    background: url('/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-advice-blood.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 0;
+}
+
+.publications-detail-quiz__start p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+.startQuiz {
+    margin-left: 50px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    padding: 12px 40px;
+    background: #D2232A;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.publications-detail-quiz__question-container .publications-detail-quiz__youtube {
     display: block;
     margin: auto;
     margin-bottom: 30px;
@@ -759,15 +848,146 @@
     color: #fff;
 }
 
-.publications-detail-advice {
-    background: #333333;
+.sidebar-advice {
+    background: #1E1E1E;
     border-radius: 5px;
-    padding: 5px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.sidebar-advice__body {
+    padding: 235px 30px 35px 30px;
+}
+
+
+.sidebar-advice .rykov-sidebar {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    height: 360px;
+    left: 0;
+    background: linear-gradient(360deg, #1E1E1E 0%, rgba(30, 30, 30, 0) 100%), url("/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/rykov-sidebar.jpg");
+    border-radius: 5px;
+}
+
+.sidebar-advice .h3 {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar-advice p {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar-advice .subscribe-form-item__control--input-email {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 8px;
+    height: 35px;
+}
+
+.sidebar-advice .subscribe-form-item--btn-submit {
+    display: block;
+    position: unset;
+}
+
+.sidebar-advice .subscribe-form-item--btn-submit input {
+    left: unset;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.subscribe-form {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 0.7), rgba(37, 37, 37, 0.7)), url('/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-advice.webp');
+    border-radius: 0;
+    padding: 0;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.subscribe-form .subscribe-form-body {
+    padding: 40px 20px 25px 20px;
+}
+
+.subscribe-form .h3 {
+    background: url('/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-advice-blood.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 14px 50px 50px 50px;
+}
+
+.subscribe-form p {
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.subscribe-form .subscribe-form-item__control--input-email {
+    width: 80%;
+    margin-bottom: 8px;
+    height: 35px;
+}
+
+.subscribe-form .subscribe-form-item--btn-submit {
+    display: block;
+    position: unset;
+}
+
+.subscribe-form .subscribe-form-item--btn-submit input {
+    left: unset;
+    width: 80%;
+    margin: auto;
+}
+
+.publications-detail-advice {
+    background: linear-gradient(0deg, rgba(37, 37, 37, 0.7), rgba(37, 37, 37, 0.7)), url('/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-advice.webp');
+    border-radius: 0;
+    padding: 0;
     margin-bottom: 40px;
 }
 
+.publications-detail-advice .input-group {
+    margin: auto;
+    width: 100%;
+}
+
+.publications-detail-advice input, .publications-detail-advice .form-control.advice-input {
+    height: 35px;
+}
+
+.publications-detail-advice .form-control {
+    margin-bottom: 0;
+}
+
 .publications-detail-advice-body {
-    padding: 27px 25px 35px 25px;
+    padding: 40px 125px 35px 125px;
 }
 
 .publications-detail-quiz__question-container .input-group {
@@ -799,16 +1019,23 @@
 }
 
 .publications-detail-advice p {
-    font-weight: 300;
-    font-size: 1.125rem;
-    line-height: 24px;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: center;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
 
 .publications-detail-advice .h3 {
-    font-weight: normal;
-    font-size: 1.75rem;
+    background: url('/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-advice-blood.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    padding: 14px 4px 90px 4px;
     line-height: 34px;
     color: #FFFFFF;
     margin-bottom: 10px;
@@ -871,7 +1098,7 @@
     position: relative;
 }
 
-.download-form .subscribe-form-item--btn-submit input, .subscribe-form .subscribe-form-item--btn-submit input {
+.download-form .subscribe-form-item--btn-submit input {
     left: -20px;
 }
 
@@ -1025,6 +1252,35 @@
         width: 100%;
     }
 
+    .publications-detail-quiz__start {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .publications-detail-quiz__start p {
+        margin-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .startQuiz {
+        margin: auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .publications-detail-quiz__start .h3 {
+        -webkit-background-size: cover;
+        background-size: cover;
+        padding: 15px 30px 50px 30px;
+        font-size: 1.575rem;
+    }
+
+    .publications-detail-advice .form-control {
+        margin-bottom: 20px;
+    }
+
+
     .publications-detail-quiz__FB {
         width: 100%;
     }
@@ -1038,6 +1294,7 @@
         margin-bottom: 15px;
         font-weight: normal;
         font-size: 22px;
+        padding: 14px 4px 35px 4px;
     }
 
     .publications-detail-advice p {
@@ -1063,7 +1320,7 @@
     }
 
     .publications-detail-advice {
-        background: #252525;
+        background-position: center;
     }
 
     .publications-detail-advice-body .input-group .input-group-append, .publications-detail-quiz__question-container .input-group .input-group-append {
@@ -1288,11 +1545,11 @@
         max-width: 315px;
     }
 
-    .publications-detail-quiz .publications-detail-quiz__title{
+    .publications-detail-quiz .publications-detail-quiz__title {
         font-size: 1.4rem;
     }
 
-    .btn.btn-outline.adviceBtn{
+    .btn.btn-outline.adviceBtn {
         width: 100%;
     }
 
@@ -1337,7 +1594,7 @@
         padding-left: 20px;
     }
 
-    .publications-detail-quiz {
+    .publications-detail-quiz__body {
         padding: 35px 40px 35px 40px;
     }
 
