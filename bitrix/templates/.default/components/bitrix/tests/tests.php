@@ -12,7 +12,7 @@ ob_start();
                         рекомендации по мерам защиты от субсидиарной ответственности</p>
                     <button onclick="ym(67390900, 'reachGoal', 'testSubsidStart'); return true;" class="startQuiz" id="test1">Пройти тест</button>
                 </div>
-                <div class="col-4 d-md-flex d-none">
+                <div class="col-4 d-md-flex d-none d-lg-none d-xl-flex ">
                     <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-law.png"
                          alt="law">
                 </div>
@@ -381,7 +381,7 @@ ob_start();
                         потеря ваших денег.</p>
                     <button onclick="ym(67390756, 'reachGoal', 'testDebtStart'); return true;" class="startQuiz" id="test1">Пройти тест</button>
                 </div>
-                <div class="col-3 d-md-flex d-none">
+                <div class="col-3 d-md-flex d-none d-lg-none d-xl-flex">
                     <img class="copper" src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/copper.png"
                          alt="copper">
                 </div>

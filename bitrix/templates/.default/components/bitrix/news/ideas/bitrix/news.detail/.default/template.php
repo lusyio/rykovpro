@@ -138,8 +138,7 @@ $widgetSubcide = ' <div class="subscribe-form">
                         <? endforeach; ?>
                     </div>
                     <?php
-                    $rand = rand(1, 2);
-                    if ($rand === 1) {
+                    if (rand(0, 1)) {
                         echo $widgetSubcide;
                     } else {
                         echo $widgetAdvice;
@@ -203,8 +202,7 @@ $widgetSubcide = ' <div class="subscribe-form">
             <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-flex">
                 <div class="ideas-detail-sidebar">
                     <?php
-                    $rand = rand(1, 2);
-                    if ($rand === 1) {
+                    if (rand(0, 1)) {
                         echo $widgetSubcide;
                     } else {
                         echo $widgetAdvice;
