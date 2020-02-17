@@ -12,10 +12,10 @@ $(function () {
     });
 
     $(window).scroll(function () {
-        let headers = $('h2');
+        let headers = $("h1, h2, h3, h4, h5, h6");
         headers.each(function (i, el) {
             let top = $(el).offset().top - 25;
-            let next = $(el).nextAll('h2');
+            let next = $(el).nextAll(el.tagName);
             if (next.length !== 0) {
                 next = next.offset().top
             } else {

@@ -798,6 +798,12 @@
     background: #e83f46;
 }
 
+@media screen and (max-width: 1200px) and (min-width: 991px) {
+    .subscribe-form .h3 {
+        margin: 0 -20px;
+    }
+}
+
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
     .subscribe-form .h3 {
