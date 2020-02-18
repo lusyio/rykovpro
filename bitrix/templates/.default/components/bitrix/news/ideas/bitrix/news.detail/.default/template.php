@@ -260,6 +260,5 @@ $widgetSubcide = ' <div class="subscribe-form">
                 </div>
             </div>
         </div>
-
     <? endif; ?>
 </div>

@@ -1529,7 +1529,7 @@
         padding: 27px 25px 35px 20px;
     }
 
-    .subscribe-form .h3{
+    .subscribe-form .h3 {
         margin: 0 -20px;
     }
 
@@ -1573,7 +1573,7 @@
 
 @media (max-width: 991px) {
 
-    .sticky-menu.stop{
+    .sticky-menu.stop {
         position: unset;
         margin: 0;
         padding: 0;
@@ -1618,6 +1618,10 @@
 
     .sidebar-advice__body {
         padding-top: 30px;
+    }
+
+    .subscribe-form .h3 {
+        padding: 24px 50px 50px 50px;
     }
 
     .publications-detail-quiz__start .h3 {

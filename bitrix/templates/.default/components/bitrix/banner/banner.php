@@ -6,13 +6,16 @@ ob_start();
 $banners['default'] = ob_get_clean();
 ob_start();
 ?>
-    <div class="subscribe-form">
-        <div class="subscribe-form-body">
-            <p class="h3"> Как не попасть под субсидиарку</p>
-            <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность. Еженедельная авторская
-                рассылка от Ивана Рыкова</p>
+    <div class="sidebar-advice">
+        <div class="sidebar-advice__body">
+            <div class="rykov-sidebar"></div>
+            <p class="h3">Юридические советы по работе с контрагентами</p>
+            <p>
+                Как работать с дебиторкой, вести переговоры, образцы документов, кейсы из практки и многое другое в
+                еженедельной авторской рассылке от Ивана Рыкова
+            </p>
             <form
-                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarSubsid'); return true;"
+                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarDebt'); return true;"
                     method="POST"
                     action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                     name="subscribtion_form"
@@ -44,16 +47,13 @@ ob_start();
 $banners['service-ad'] = ob_get_clean();
 ob_start()
 ?>
-    <div class="sidebar-advice">
-        <div class="sidebar-advice__body">
-            <div class="rykov-sidebar"></div>
-            <p class="h3">Юридические советы по работе с контрагентами</p>
-            <p>
-                Как работать с дебиторкой, вести переговоры, образцы документов, кейсы из практки и многое другое в
-                еженедельной авторской рассылке от Ивана Рыкова
-            </p>
+    <div class="subscribe-form">
+        <div class="subscribe-form-body">
+            <p class="h3"> Как не попасть под субсидиарку</p>
+            <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность. Еженедельная авторская
+                рассылка от Ивана Рыкова</p>
             <form
-                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarDebt'); return true;"
+                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarSubsid'); return true;"
                     method="POST"
                     action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                     name="subscribtion_form"
