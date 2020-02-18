@@ -3,7 +3,13 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 <html>
 <head>
-<?$APPLICATION->ShowHead();?>
+    <?echo '<meta http-equiv="Content-Type" content="text/html; charset='.LANG_CHARSET.'"'.($bXhtmlStyle? ' /':'').'>'."\n";
+    $APPLICATION->ShowMeta("robots", false, $bXhtmlStyle);
+    $APPLICATION->ShowMeta("description", false, $bXhtmlStyle);
+    $APPLICATION->ShowLink("canonical", null, $bXhtmlStyle);
+    $APPLICATION->ShowCSS(true, $bXhtmlStyle);
+    $APPLICATION->ShowHeadStrings();
+    $APPLICATION->ShowHeadScripts();?>
 <title><?$APPLICATION->ShowTitle()?></title>
 </head>
 

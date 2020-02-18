@@ -48,21 +48,6 @@ $this->setFrameMode(true);
 <?endwhile;?>
 <div class = "row">
 	<div class = "col-12 col-md-12 col-lg-8">
-		<div class = "publication-sections">
-			<?
-				$arFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "GLOBAL_ACTIVE" => "Y");
-				$db_list = CIBlockSection::GetList(Array("SORT" => "ASC"), $arFilter, true);
-			?>
-			<ul>
-				<?while($ar_result = $db_list->GetNext()):?>
-					<?if($_SERVER["REQUEST_URI"] == $ar_result["SECTION_PAGE_URL"]):?>
-						<li class = "active"><a href = "<?=$ar_result['SECTION_PAGE_URL'];?>"><?=$ar_result["NAME"];?></a></li>
-					<?else:?>
-						<li><a href = "<?=$ar_result['SECTION_PAGE_URL'];?>"><?=$ar_result["NAME"];?></a></li>
-					<?endif;?>
-				<?endwhile;?>
-			</ul>
-		</div>
 		<div class = "publications-list">
 			<div class = "row">
 				<?foreach($arResult["ITEMS"] as $arItem):?>

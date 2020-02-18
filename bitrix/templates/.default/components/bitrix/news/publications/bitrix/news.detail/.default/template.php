@@ -90,6 +90,26 @@ function getSubscribeForm()
     return ob_get_clean();
 }
 
+function getRandomPublicationId($sectionId, $afterDate)
+{
+    //Уточняем какой будем использовать инфоблок и ограничиваем выборку по дате создания
+    $arFilter = [
+        'IBLOCK_ID' => $sectionId,
+        '>=DATE_CREATE' => date('d.m.Y H:i:s', strtotime($afterDate)),
+    ];
+//Получаем массив всех элементов
+    $res = CIBlockElement::GetList(false, $arFilter, array('IBLOCK_ID','ID'));
+//Перебираем все элементы инфоблока и записываем в массив их IDшники
+    $ids = [];
+    while($el = $res->GetNext()) {
+        $ids[] = $el['ID'];
+    }
+    if (count($ids) > 0) {
+        return $ids[array_rand($ids)];
+    }
+    return false;
+}
+
 // БЛОК ОБРАБОТКИ ШОРТКОДОВ
 // шорткод [recommend id={publicationId}]
 $codes = [];
@@ -98,6 +118,26 @@ if ($codesCount > 0) {
     foreach ($codes[1] as $key => $value) {
         $html = getRecommended($value, $arResult['NAME']);
         $arResult["DETAIL_TEXT"] = preg_replace('~\[recommend id=' . $value . '\]~iU', $html, $arResult["DETAIL_TEXT"]);
+    }
+} else {
+    // Если нет шорткода то вставляем рандомную статью
+    // после 5го тега </p> - если тегов меньше 9 включительно,
+    // после последнего - если тегов меньше 5,
+    // после 5 с конца - если тегов больше 10
+    $recommendedId = getRandomPublicationId(4, '2019/12/24');
+    if ($recommendedId) {
+        $html = getRecommended($recommendedId, $arResult['NAME']);
+        $tagPMatches = [];
+        $found = preg_match_all('~\</p\>~', $arResult["DETAIL_TEXT"], $tagPMatches, PREG_OFFSET_CAPTURE);
+        if ($found > 0) {
+            if ($found < 5) {
+                $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][$found-1][1], 4);
+            } elseif ($found < 10) {
+                $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][4][1], 4);
+            } else {
+                $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][$found - 5][1], 4);
+            }
+        }
     }
 }
 

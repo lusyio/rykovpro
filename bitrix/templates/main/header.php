@@ -6,7 +6,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <!DOCTYPE html>
 <html lang = "ru">
 	<head>
-		<?$APPLICATION->ShowHead();?>
+        <?echo '<meta http-equiv="Content-Type" content="text/html; charset='.LANG_CHARSET.'"'.($bXhtmlStyle? ' /':'').'>'."\n";
+        $APPLICATION->ShowMeta("robots", false, $bXhtmlStyle);
+        $APPLICATION->ShowMeta("description", false, $bXhtmlStyle);
+        $APPLICATION->ShowLink("canonical", null, $bXhtmlStyle);
+        $APPLICATION->ShowCSS(true, $bXhtmlStyle);
+        $APPLICATION->ShowHeadStrings();
+        $APPLICATION->ShowHeadScripts();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
 		<meta charset = "utf-8">
 		<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
