@@ -98,10 +98,10 @@ function getRandomPublicationId($sectionId, $afterDate)
         '>=DATE_CREATE' => date('d.m.Y H:i:s', strtotime($afterDate)),
     ];
 //Получаем массив всех элементов
-    $res = CIBlockElement::GetList(false, $arFilter, array('IBLOCK_ID','ID'));
+    $res = CIBlockElement::GetList(false, $arFilter, array('IBLOCK_ID', 'ID'));
 //Перебираем все элементы инфоблока и записываем в массив их IDшники
     $ids = [];
-    while($el = $res->GetNext()) {
+    while ($el = $res->GetNext()) {
         $ids[] = $el['ID'];
     }
     if (count($ids) > 0) {
@@ -131,7 +131,7 @@ if ($codesCount > 0) {
         $found = preg_match_all('~\</p\>~', $arResult["DETAIL_TEXT"], $tagPMatches, PREG_OFFSET_CAPTURE);
         if ($found > 0) {
             if ($found < 5) {
-                $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][$found-1][1], 4);
+                $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][$found - 1][1], 4);
             } elseif ($found < 10) {
                 $arResult["DETAIL_TEXT"] = substr_replace($arResult["DETAIL_TEXT"], '</p>' . $html, $tagPMatches[0][4][1], 4);
             } else {
