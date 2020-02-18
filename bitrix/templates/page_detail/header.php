@@ -8,7 +8,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<head>
         <?echo '<meta http-equiv="Content-Type" content="text/html; charset='.LANG_CHARSET.'"'.($bXhtmlStyle? ' /':'').'>'."\n";
         $APPLICATION->ShowMeta("robots", false, $bXhtmlStyle);
-        echo $APPLICATION->GetMeta('description');
         $APPLICATION->ShowMeta("description", false, $bXhtmlStyle);
         $APPLICATION->ShowLink("canonical", null, $bXhtmlStyle);
         $APPLICATION->ShowCSS(true, $bXhtmlStyle);
