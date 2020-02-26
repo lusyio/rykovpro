@@ -54,6 +54,10 @@ $(function () {
 
     $(document).ready(function () {
 
+        if ($('.publications-detail-sidebar ul').outerHeight() <= document.documentElement.clientHeight) {
+            $('.publications-detail-sidebar').addClass('sticky-menu');
+        }
+
         $('#test1').on('click', () => {
             $('.publications-detail-quiz__body').removeClass('d-none');
             $('.publications-detail-quiz__start').addClass('d-none')
