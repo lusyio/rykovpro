@@ -13,6 +13,7 @@ $(function () {
 
     $(window).scroll(function () {
         let headers = $("h1, h2, h3, h4, h5, h6");
+
         headers.each(function (i, el) {
             let top = $(el).offset().top - 25;
             let next = $(el).nextAll(el.tagName);
@@ -29,13 +30,16 @@ $(function () {
             }
         });
 
-        if (document.documentElement.clientWidth >= 991) {
-            let stopEl = $('.publications-detail-text').height() - $('.page-header-wrap').height() - $('.publications-detail-picture').height() - $('.publications-detail-tags').height();
-            let scroll = $(window).scrollTop();
-            if (scroll >= stopEl) {
-                $('.sticky-menu').addClass('stop').css('top', (stopEl - document.documentElement.clientHeight - 25))
-            } else {
-                $('.sticky-menu').removeClass('stop').css('top', 0)
+        if ($('.publications-detail-sidebar ul').outerHeight() <= document.documentElement.clientHeight) {
+            $('.publications-detail-sidebar').addClass('sticky-menu');
+            if (document.documentElement.clientWidth >= 991) {
+                let stopEl = $('.publications-detail-text').height() - $('.page-header-wrap').height() - $('.publications-detail-picture').height() - $('.publications-detail-tags').height();
+                let scroll = $(window).scrollTop();
+                if (scroll >= stopEl) {
+                    $('.sticky-menu').addClass('stop').css('top', (stopEl - document.documentElement.clientHeight - 25))
+                } else {
+                    $('.sticky-menu').removeClass('stop').css('top', 0)
+                }
             }
         }
     });
@@ -53,7 +57,7 @@ $(function () {
         $('#test1').on('click', () => {
             $('.publications-detail-quiz__body').removeClass('d-none');
             $('.publications-detail-quiz__start').addClass('d-none')
-        })
+        });
 
         var totalScore = 0;
         $('.publications-detail-quiz__answer input').on('change', function () {
@@ -71,7 +75,7 @@ $(function () {
             $('.publications-detail-quiz__question-container:visible').addClass('d-none');
             next.removeClass('d-none')
             if ($('.publications-detail-quiz__question-container.end').is(':visible')) {
-                $('.publications-detail-quiz__hr').removeClass('d-none')
+                $('.publications-detail-quiz__hr').removeClass('d-none');
                 let text;
                 let title;
                 let defId;
