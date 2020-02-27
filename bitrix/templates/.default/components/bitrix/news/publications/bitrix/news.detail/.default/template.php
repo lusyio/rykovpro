@@ -242,57 +242,62 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
     <div class="row">
         <div class="col-lg-1 d-none order-2 d-lg-flex"></div>
         <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-block">
-            <div class="publications-detail-sidebar">
-                <?= $listOfContentHtml ?>
-                <?= $banner ?>
-                <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["VALUE"] as $key => $value): ?>
-                    <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["DESCRIPTION"][$key]): ?>
-                        <div class="publications-detail-banner">
-                            <a href="<?= $arResult['DISPLAY_PROPERTIES']['BX_PUBLICATIONS_BANNERS']['DESCRIPTION'][$key]; ?>"
-                               target="_blank">
-                                <img class="img-fluid" src="<?= CFile::GetPath($value); ?>"
-                                     alt="<?= $arResult['NAME']; ?>">
-                            </a>
-                        </div>
-                    <? else: ?>
-                        <div class="publications-detail-banner">
-                            <img class="img-fluid" src="<?= CFile::GetPath($value); ?>" alt="<?= $arResult['NAME']; ?>">
+            <a id="collapseLink" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse">
+                Оглавление
+            </a>
+            <div id="collapse" class="collapse dont-collapse-sm">
+                <div class="publications-detail-sidebar">
+                    <?= $listOfContentHtml ?>
+                    <?= $banner ?>
+                    <? foreach ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["VALUE"] as $key => $value): ?>
+                        <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_BANNERS"]["DESCRIPTION"][$key]): ?>
+                            <div class="publications-detail-banner">
+                                <a href="<?= $arResult['DISPLAY_PROPERTIES']['BX_PUBLICATIONS_BANNERS']['DESCRIPTION'][$key]; ?>"
+                                   target="_blank">
+                                    <img class="img-fluid" src="<?= CFile::GetPath($value); ?>"
+                                         alt="<?= $arResult['NAME']; ?>">
+                                </a>
+                            </div>
+                        <? else: ?>
+                            <div class="publications-detail-banner">
+                                <img class="img-fluid" src="<?= CFile::GetPath($value); ?>" alt="<?= $arResult['NAME']; ?>">
+                            </div>
+                        <? endif; ?>
+                    <? endforeach; ?>
+                    <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
+                        <div class="download-form">
+                            <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/download-file.png"
+                                 alt="Скачать файлы">
+                            <p>Скачайте образец документа {название документа} в формате .docx </p>
+                            <form
+                                    method="POST"
+                                    action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
+                                    name="subscribtion_form"
+                            >
+                                <div class="subscribe-form-item subscribe-form-item--input-email">
+                                    <input
+                                            class="subscribe-form-item__control subscribe-form-item__control--input-email"
+                                            type="text"
+                                            name="email"
+                                            value=""
+                                            placeholder="Введите ваш email"
+                                    />
+                                </div>
+                                <div class="subscribe-form-item subscribe-form-item--btn-submit">
+                                    <input
+                                            class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
+                                            type="submit"
+                                            value="Скачать"
+                                    />
+                                </div>
+                                <input type="hidden" name="charset" value="UTF-8"/>
+                                <input type="hidden" name="default_list_id" value="19597957"/>
+                                <input type="hidden" name="overwrite" value="2"/>
+                                <input type="hidden" name="is_v5" value="1"/>
+                            </form>
                         </div>
                     <? endif; ?>
-                <? endforeach; ?>
-                <? if ($arResult["DISPLAY_PROPERTIES"]["BX_PUBLICATIONS_DOCS"]): ?>
-                    <div class="download-form">
-                        <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/download-file.png"
-                             alt="Скачать файлы">
-                        <p>Скачайте образец документа {название документа} в формате .docx </p>
-                        <form
-                                method="POST"
-                                action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
-                                name="subscribtion_form"
-                        >
-                            <div class="subscribe-form-item subscribe-form-item--input-email">
-                                <input
-                                        class="subscribe-form-item__control subscribe-form-item__control--input-email"
-                                        type="text"
-                                        name="email"
-                                        value=""
-                                        placeholder="Введите ваш email"
-                                />
-                            </div>
-                            <div class="subscribe-form-item subscribe-form-item--btn-submit">
-                                <input
-                                        class="subscribe-form-item__btn subscribe-form-item__btn--btn-submit"
-                                        type="submit"
-                                        value="Скачать"
-                                />
-                            </div>
-                            <input type="hidden" name="charset" value="UTF-8"/>
-                            <input type="hidden" name="default_list_id" value="19597957"/>
-                            <input type="hidden" name="overwrite" value="2"/>
-                            <input type="hidden" name="is_v5" value="1"/>
-                        </form>
-                    </div>
-                <? endif; ?>
+                </div>
             </div>
         </div>
         <div class="col-12 col-md-12 pr-unset pr-lg-0 order-lg-1 order-3 col-lg-7">

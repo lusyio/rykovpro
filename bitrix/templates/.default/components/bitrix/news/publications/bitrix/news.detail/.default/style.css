@@ -1087,6 +1087,17 @@
     border-radius: 8px;
 }
 
+#collapseLink {
+    display: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+    color: #000000;
+    padding: 30px 15px;
+    background: #FAFAFA;
+    text-align: center;
+}
+
 /* Subscribe-form */
 .subscribe-form {
     display: flex;
@@ -1556,6 +1567,14 @@
     }
 }
 
+@media (min-width: 768px) {
+    .collapse.dont-collapse-sm {
+        display: block !important;
+        height: auto !important;
+        visibility: visible;
+    }
+}
+
 @media screen and (max-width: 991px) and (min-width: 768px) {
     .subscribe-form .h3 {
         padding: 14px 4px 90px 4px;
@@ -1618,6 +1637,18 @@
 }
 
 @media (max-width: 767px) {
+
+    #collapseLink {
+        display: block;
+    }
+
+    .publications-detail-sidebar > ul > p {
+        display: none;
+    }
+
+    .publications-detail-text{
+        margin-top: 20px;
+    }
 
     .subscribe-form .subscribe-form-body {
         padding: 0px 20px 25px 20px;
