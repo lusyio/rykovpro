@@ -423,10 +423,19 @@
 
     .books-container > a {
         margin: auto;
+        margin-bottom: 25px;
     }
 
     .publications .publications__list {
         padding: unset;
+    }
+
+    .rykov-top {
+        display: block;
+    }
+
+    .rykov-top > div {
+        width: 100%;
     }
 }
 

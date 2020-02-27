@@ -213,22 +213,22 @@ $APPLICATION->SetAdditionalCSS("/ivan-rykov-analitik-dolgovogo-rynka/style.css")
         <div class="col">
             <p class="books__header">Научная и публицистическая деятельность</p>
             <div class="books-container">
-                <a href="/books">
+                <a href="/books/subsidiarnaya-otvetstvennost/">
                     <img src="/ivan-rykov-analitik-dolgovogo-rynka/img/skhemy-bolshe-ne-rabotayut.png"
                          alt="skhemy-bolshe-ne-rabotayut">
                     <img class="more" src="/ivan-rykov-analitik-dolgovogo-rynka/svg/more.svg" alt="more">
                 </a>
-                <a href="/books">
+                <a href="/books/biznes-na-rasprodazhakh-imushchestva-bankrotov/">
                     <img src="/ivan-rykov-analitik-dolgovogo-rynka/img/biznes-na-rasprodazhah-imushchestva-banktrotov.png"
                          alt="biznes-na-rasprodazhah-imushchestva-banktrotov">
                     <img class="more" src="/ivan-rykov-analitik-dolgovogo-rynka/svg/more.svg" alt="more">
                 </a>
-                <a href="/books">
+                <a href="/books/subsidiarnaya-otvetstvennost-v-rossiyskoy-federatsii/">
                     <img src="/ivan-rykov-analitik-dolgovogo-rynka/img/subsidiarnaya-otvetstvennost.png"
                          alt="subsidiarnaya-otvetstvennost">
                     <img class="more" src="/ivan-rykov-analitik-dolgovogo-rynka/svg/more.svg" alt="more">
                 </a>
-                <a href="/books">
+                <a href="/books/kreditory-vs-debitory/">
                     <img src="/ivan-rykov-analitik-dolgovogo-rynka/img/kreditory-vs-debitory.png"
                          alt="kreditory-vs-debitory">
                     <img class="more" src="/ivan-rykov-analitik-dolgovogo-rynka/svg/more.svg" alt="more">
