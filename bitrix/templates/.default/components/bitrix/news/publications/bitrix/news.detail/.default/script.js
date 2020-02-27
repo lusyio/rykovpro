@@ -31,7 +31,7 @@ $(function () {
         });
 
         if ($('.publications-detail-sidebar ul').outerHeight() <= document.documentElement.clientHeight) {
-            $('.publications-detail-sidebar').addClass('sticky-menu');
+            $('#collapse').addClass('sticky-menu');
             if (document.documentElement.clientWidth >= 991) {
                 let stopEl = $('.publications-detail-text').height() - $('.page-header-wrap').height() - $('.publications-detail-picture').height() - $('.publications-detail-tags').height();
                 let scroll = $(window).scrollTop();
@@ -55,7 +55,7 @@ $(function () {
     $(document).ready(function () {
 
         if ($('.publications-detail-sidebar ul').outerHeight() <= document.documentElement.clientHeight) {
-            $('.publications-detail-sidebar').addClass('sticky-menu');
+            $('#collapse').addClass('sticky-menu');
         }
 
         $('#test1').on('click', () => {

@@ -223,11 +223,14 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
     <? if (!$picture): ?>
         <? $picture = $templateFolder . "/img/default.jpg"; ?>
     <? endif; ?>
-    <div class="publications-detail-picture" data-img="<?= $picture; ?>">
-        <h1><?= $arResult["NAME"]; ?></h1>
-        <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-            <span><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
-        <? endif; ?>
+    <div class="publications-detail-picture">
+        <div class="publications-detail-picture-body">
+            <h1><?= $arResult["NAME"]; ?></h1>
+            <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
+                <span><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
+            <? endif; ?>
+        </div>
+        <img src="<?= $picture; ?>" alt="<?= $arResult["NAME"]; ?>" title="<?= $arResult["NAME"]; ?>">
     </div>
     <? if ($arResult["TAGS"]): ?>
         <? $tags = explode(",", $arResult["TAGS"]); ?>
@@ -242,7 +245,8 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
     <div class="row">
         <div class="col-lg-1 d-none order-2 d-lg-flex"></div>
         <div class="col-12 col-lg-4 order-lg-3 order-1 d-lg-block">
-            <a id="collapseLink" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse">
+            <a id="collapseLink" data-toggle="collapse" href="#collapse" role="button" aria-expanded="false"
+               aria-controls="collapse">
                 Оглавление
             </a>
             <div id="collapse" class="collapse dont-collapse-sm">
@@ -260,7 +264,8 @@ $arResult["DETAIL_TEXT"] = preg_replace('~</table>~iU', '</table></div>', $arRes
                             </div>
                         <? else: ?>
                             <div class="publications-detail-banner">
-                                <img class="img-fluid" src="<?= CFile::GetPath($value); ?>" alt="<?= $arResult['NAME']; ?>">
+                                <img class="img-fluid" src="<?= CFile::GetPath($value); ?>"
+                                     alt="<?= $arResult['NAME']; ?>">
                             </div>
                         <? endif; ?>
                     <? endforeach; ?>
