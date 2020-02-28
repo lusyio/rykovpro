@@ -35,7 +35,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <?$APPLICATION->AddHeadScript(PLUGINS."/jquery-3.4.1/js/jquery.min.js");?>
 		<?$APPLICATION->AddHeadScript(PLUGINS."/slick-1.8.1/js/slick.min.js");?>
 		<?$APPLICATION->AddHeadScript(ASSETS."/js/global.js");?>
-		<link rel = "shortcut icon" type = "image/x-icon" href = "/favicon.ico">
+        <link rel = "shortcut icon" type = "image/x-icon" href = "/favicon.ico">
 		<link rel = "icon" type = "image/x-icon" href = "/favicon.png">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
@@ -59,7 +59,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                 <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Кейсы и примеры из практики</p>
                                 <p class="advice-modal__more">это и многое другое в еженедельной авторской рассылке от Ивана Рыкова</p>
                                 <form method="POST"
-                                      onsubmit="ym(67390081, 'reachGoal', 'emailModal'); return true;"
+                                      onsubmit="ym(21107527, 'reachGoal', 'emailModal'); return true;"
                                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                       name="subscribtion_form">
                                     <div class="input-group">

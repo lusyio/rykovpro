@@ -11,7 +11,7 @@ ob_start();
                 еженедельной авторской рассылке от Ивана Рыкова
             </p>
             <form
-                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarDebt'); return true;"
+                    onsubmit="ym(21107527, 'reachGoal', 'emailSidebarDebt'); return true;"
                     method="POST"
                     action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                     name="subscribtion_form"
@@ -52,7 +52,7 @@ ob_start();
                 еженедельной авторской рассылке от Ивана Рыкова
             </p>
             <form
-                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarDebt'); return true;"
+                    onsubmit="ym(21107527, 'reachGoal', 'emailSidebarDebt'); return true;"
                     method="POST"
                     action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                     name="subscribtion_form"
@@ -90,7 +90,7 @@ ob_start()
             <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность. Еженедельная авторская
                 рассылка от Ивана Рыкова</p>
             <form
-                    onsubmit="ym(67390351, 'reachGoal', 'emailSidebarSubsid'); return true;"
+                    onsubmit="ym(21107527, 'reachGoal', 'emailSidebarSubsid'); return true;"
                     method="POST"
                     action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                     name="subscribtion_form"

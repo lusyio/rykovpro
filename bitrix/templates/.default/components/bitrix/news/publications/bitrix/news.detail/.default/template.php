@@ -62,7 +62,7 @@ function getSubscribeForm()
                     <p>Как правильно вести бизнес, чтобы не попасть под субсидиарную ответственность - еженедельная
                         авторская рассылка от Ивана Рыкова</p>
                     <form method="POST"
-                          onsubmit="ym(67390669, 'reachGoal', 'emailArticleSubsid'); return true;"
+                          onsubmit="ym(21107527, 'reachGoal', 'emailArticleSubsid'); return true;"
                           action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                           name="subscribtion_form">
                         <div class="input-group">

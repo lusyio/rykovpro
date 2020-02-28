@@ -16,13 +16,11 @@
 
 .publications-detail .publications-detail-picture img {
     position: absolute;
-    margin: auto;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
     z-index: 0;
     width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .publications-detail-picture {
@@ -395,6 +393,8 @@
 
 .publications-detail-text .publications-detail-picture img {
     height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
     width: 100%;
     position: absolute;
     z-index: 0;
@@ -1452,8 +1452,8 @@
     height: 30px;
     background-color: #AEAEAE;
     outline: none;
-    opacity: 0;
-    transform: scale(1);
+    /*opacity: 0;*/
+    transform: scale(0);
     pointer-events: none;
     transition: opacity 0.3s, transform 0.2s;
 }
@@ -1516,17 +1516,8 @@
     transform: translate(5px, 5px) scale(1);
 }
 
-/* Hover, Focus */
-.pure-material-radio:hover > input {
-    opacity: 0.04;
-}
-
 .pure-material-radio > input:focus {
     opacity: 0;
-}
-
-.pure-material-radio:hover > input:focus {
-    opacity: 0.16;
 }
 
 /* Active */
@@ -1553,6 +1544,16 @@
 /*--------------------------------------------------------------
 # RADIO BTN
 --------------------------------------------------------------*/
+
+@media (hover: hover) {
+    .pure-material-radio:hover > input {
+        opacity: 0.04;
+    }
+
+    .pure-material-radio:hover > input:focus {
+        opacity: 0.16;
+    }
+}
 
 @media screen and (max-width: 1200px) and (min-width: 991px) {
     .publications-detail-advice-body {
@@ -1687,7 +1688,6 @@
     }
 
     .publications-detail-quiz__start p {
-        padding-left: 0;
         text-align: center;
     }
 

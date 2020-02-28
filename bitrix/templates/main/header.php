@@ -60,7 +60,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                                 <p class="advice-modal__list"><img src="/bitrix/templates/main/images/tick.svg" alt="">Кейсы и примеры из практики</p>
                                 <p class="advice-modal__more">это и многое другое в еженедельной авторской рассылке от Ивана Рыкова</p>
                                 <form method="POST"
-                                      onsubmit="ym(67390081, 'reachGoal', 'emailModal'); return true;"
+                                      onsubmit="ym(21107527, 'reachGoal', 'emailModal'); return true;"
                                       action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                                       name="subscribtion_form">
                                     <div class="input-group">

@@ -10,7 +10,7 @@ ob_start();
                     <p>Пройдите тест из 10 вопросов, чтобы узнать о своей ситуации. По итогам теста вы узнаете в какой
                         группе риска вы находитесь (критическая, высокая, невысокая), и в соответствии с ней получите
                         рекомендации по мерам защиты от субсидиарной ответственности</p>
-                    <button onclick="ym(67390900, 'reachGoal', 'testSubsidStart'); return true;" class="startQuiz" id="test1">Пройти тест</button>
+                    <button onclick="ym(21107527, 'reachGoal', 'testSubsidStart'); return true;" class="startQuiz" id="test1">Пройти тест</button>
                 </div>
                 <div class="col-4 d-md-flex d-none d-lg-none d-xl-flex ">
                     <img src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/img-law.png"
@@ -341,7 +341,7 @@ ob_start();
                     <img class="publications-detail-quiz__youtube"
                          src="/bitrix/templates/.default/components/bitrix/news/publications/bitrix/news.detail/.default/img/youtube-img.webp"
                          alt="">
-                    <form onsubmit="ym(67390900, 'reachGoal', 'emailTestSubsid'); return true;" method="POST"
+                    <form onsubmit="ym(21107527, 'reachGoal', 'emailTestSubsid'); return true;" method="POST"
                           action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                           name="subscribtion_form">
                         <div class="input-group ">
@@ -633,7 +633,7 @@ ob_start();
 
                     </p>
                     <form method="POST"
-                          onsubmit="ym(67390756, 'reachGoal', 'emailTestDebt'); return true;"
+                          onsubmit="ym(21107527, 'reachGoal', 'emailTestDebt'); return true;"
                           action="https://cp.unisender.com/ru/subscribe?hash=6jjxbafghy6pa5yqnzi9qcdi6yd4oaidhducaapy38enjnmfr9z3o"
                           name="subscribtion_form">
                         <div class="input-group ">
